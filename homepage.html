@@ -27,13 +27,13 @@
             <div class="presentaion">
                 <h1>Réserves le menu qui vous convient</h1>
                 <p>Découvrez des restaurants d’exception, sélectionnés par nos soins.</p>
-                <button class="presentation_btn" type="explorer" href="#restaurant">Explorer nos restaurant</button>
+                <a href="#restaurants">Explorer nos restaurant</a>
             </div>
 
             <section class="fonctionnement">
                 <h2>Fonctionnement</h2>
                 <div>
-                    <p>1</p>
+                    <p class="fonctionnement__numero">1</p>
                     <div>
                         <i class="fa-solid fa-mobile-screen-button"></i>
                         <p>Choisissez un restaurant</p>
@@ -41,7 +41,7 @@
                 </div>
 
                 <div>
-                    <p>2</p>
+                    <p class="fonctionnement__numero">2</p>
                     <div>
                         <i class="fa-solid fa-bars"></i>
                         <p>Composez votre menu</p>
@@ -49,7 +49,7 @@
                 </div>
 
                 <div>
-                    <p>3</p>
+                    <p class="fonctionnement__numero">3</p>
                     <div>
                         <i class="fa-solid fa-store"></i>
                         <p>Dégustez au restaurant</p>
@@ -59,45 +59,55 @@
 
             <section class="restaurants" id="restaurants">
                 <h2>Restaurants</h2>
-                <div class="restaurants-cartes">
-                    <a class="carte">
-                        <img src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
-                            alt="image du restaurant - la palette du goût">
-                        <div class="carte-txt">
+                <div class="restaurants__cartes">
+                    <a class="carte" href="menu-la_palatte_du_goût.html">
+                        <div>
+                            <img src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+                                alt="image du restaurant - la palette du goût">
+                            <p>nouveau</p>
+                        </div>
+                        <div class="carte__txt">
                             <h3>La palette du goût</h3>
                             <p>Ménilmontant</p>
                         </div>
-                        <div class="coeur"></div>
+                        <div class="carte__coeur"></div>
                     </a>
 
-                    <a class="carte">
-                        <img src="images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg"
-                            alt="image du restaurant - la note enchantée">
-                        <div class="carte-txt">
+                    <a class="carte" href="menu-la_note_enchantee.html">
+                        <div>
+                            <img src="images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg"
+                                alt="image du restaurant - la note enchantée">
+                            <p>nouveau</p>
+                        </div>
+                        <div class="carte__txt">
                             <h3>La note enchantée</h3>
                             <p>Charonne</p>
                         </div>
-                        <div class="coeur"></div>
+                        <div class="carte__coeur"></div>
                     </a>
 
-                    <a class="carte">
-                        <img src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
-                            alt="image du restaurant - À la française">
-                        <div class="carte-txt">
+                    <a class="carte" href="menu-a_la_francaise.html">
+                        <div>
+                            <img src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
+                                alt="image du restaurant - À la française">
+                        </div>
+                        <div class="carte__txt">
                             <h3>À la française</h3>
                             <p>Cité Rouge</p>
                         </div>
-                        <div class="coeur"></div>
+                        <div class="carte__coeur"></div>
                     </a>
 
-                    <a class="carte">
-                        <img src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
-                            alt="image du restaurant - Le délice des sens">
-                        <div class="carte-txt">
+                    <a class="carte" href="menu-le_delice_des_sens.html">
+                        <div>
+                            <img src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
+                                alt="image du restaurant - Le délice des sens">
+                        </div>
+                        <div class="carte__txt">
                             <h3>Le délice des sens</h3>
                             <p>Folie-Méricourt</p>
                         </div>
-                        <div class="coeur"></div>
+                        <div class="carte__coeur"></div>
                     </a>
                 </div>
             </section>
