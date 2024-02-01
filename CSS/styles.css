@@ -93,8 +93,40 @@ a {
   box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.3);
 }
 
-.fonction div {
+.fonction {
+  padding: 0px 20px;
+}
+.fonction section-title {
+  margin-bottom: 10px;
+}
+.fonction .fonction_box {
   display: flex;
   align-content: center;
   align-items: center;
+  margin-top: 20px;
+  postion: relative;
+}
+.fonction .fonction_n {
+  background: #9356dc;
+  border-radius: 20px;
+  padding: 7px 11px;
+  color: white;
+  position: absolute;
+}
+.fonction .fonction_txt {
+  background: #f6f6f6;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  column-gap: 20px;
+  align-items: center;
+  height: 72px;
+  margin-left: 5%;
+  border-radius: 20px;
+}
+.fonction i {
+  color: #7e7e7e;
+}
+.fonction i:hover {
+  color: #9356dc;
 }
