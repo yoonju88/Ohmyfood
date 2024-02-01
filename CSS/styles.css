@@ -1,61 +1,100 @@
 * {
-    box-sizing: border-box;
-  }
-  
-  .main-container {
-    max-width: 768px;
-    margin: 0px auto;
-  }
-  
-  h1 {
-    font-family: "Shrikhand", serif;
-    font-size: 30px;
-    display: flex;
-    justify-content: center;
-    padding-top: 15px;
-  }
-  
-  h2, h3, p {
-    font-family: "Roboto", serif;
-  }
-  
-  h2 {
-    font-weight: 400;
-    font-size: 24px;
-  }
-  
-  img {
-    object-fit: cover;
-    width: 100%;
-  }
-  
-  .localisation p, .fa-location-dot {
-    font-size: 16px;
-  }
-  
-  .localisation_txt {
-    font-weight: 400;
-  }
-  
-  .fa-location-dot {
-    color: #353535;
-  }
-  
-  .localisation {
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    background-color: #eaeaea;
-    box-shadow: 0px 8px 6px -3px rgba(0, 0, 0, 0.4), inset 0px 5px 5px -3px rgba(0, 0, 0, 0.2);
-    height: 50px;
-    padding-top: 18px;
-    column-gap: 20px;
-  }
-  
-  main {
-    padding: 20px;
-  }
-  
-  .backgroundcolor_light-grey {
-    background-color: #f6f6f6;
-  }
+  font-family: "Roboto", serif;
+  box-sizing: border-box;
+  margin:0px;
+}
+
+.main-container {
+  max-width: 375px;
+  margin: 0px auto;
+}
+
+main {
+  padding: 20px;
+}
+
+h1 {
+  font-family: "Shrikhand", serif;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  padding-top: 15px;
+}
+
+p {
+  font-weight: light;
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 24px;
+}
+
+img {
+  object-fit: cover;
+  width: 100%;
+}
+
+.localisation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #eaeaea;
+  height: 50px;
+  column-gap: 15px;
+  font-size: 16px;
+  color: #353535;
+  font-weight: 500;
+}
+
+.background_lightgrey {
+  background-color: #f6f6f6;
+}
+
+.shadowinset {
+  box-shadow: inset 0px 5px 5px -4px rgba(0, 0, 0, 0.3);
+}
+
+.presentaion {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  padding: 40px 0px;
+  row-gap: 20px;
+}
+
+.presentation p {
+  font-weight: light;
+}
+
+a {
+  padding-top: 10px;
+  text-decoration: none;
+}
+
+.presentation_btn {
+  padding: 15px 20px;
+  border: none;
+  background: linear-gradient(#ff79da, #9356dc);
+  color: white;
+  border-radius: 25px;
+  width: 220px;
+  margin: auto;
+}
+
+.section-title {
+  padding-left: 20px;
+  margin-top: 50px;
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.dropshadow {
+  box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.fonction div {
+  display: flex;
+  align-content: center;
+  align-items: center;
+}
