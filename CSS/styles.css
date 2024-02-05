@@ -22,6 +22,7 @@ h2 {
 a {
   padding-top: 10px;
   text-decoration: none;
+  color:white;
 }
 
 h1,
@@ -29,15 +30,6 @@ h1,
 .fonction_txt {
   display: flex;
   justify-content: center;
-}
-
-p {
-  font-size: 17px;
-
-}
-
-h3 {
-  font-size: 18px;
 }
 
 header {
@@ -50,8 +42,8 @@ height:60px;
   height: 50px;
   column-gap: 15px;
   font-size: 16px;
+  font-weight: normal;
   color: #353535;
-  font-weight: 500;
   box-shadow: inset 0px 5px 5px -4px rgba(0, 0, 0, 0.3);
 }
 
@@ -67,7 +59,6 @@ height:60px;
   padding: 40px 0px 50px 0px;
   row-gap: 20px;
   box-shadow: inset 0px 5px 5px -4px rgba(0, 0, 0, 0.3);
-  background: #f6f6f6;
 }
 
 .presentation p {
@@ -77,6 +68,7 @@ height:60px;
 }
 
 .presentation_btn {
+  font-size:16px;
   font-weight: normal;
   padding: 15px 20px;
   border: none;
@@ -109,13 +101,13 @@ height:60px;
 .fonction .fonction_n {
   background: #9356dc;
   border-radius: 20px;
-  padding: 7px 11px;
+  padding: 8px 14px;
   color: white;
   position: absolute;
 }
 
 .fonction .fonction_txt {
-  font-size: 17px;
+  font-size: 16px;
   font-weight: normal;
   width: 100%;
   column-gap: 20px;
@@ -137,7 +129,7 @@ height:60px;
 
 .restaurants {
   background: #f6f6f6;
-  padding: 40px 20px;
+  padding: 50px 20px 60px 20px;
 }
 
 .restaurants .card {
@@ -148,6 +140,7 @@ height:60px;
   overflow: hidden;
   position: relative;
   margin-top: 20px;
+  z-index: 1;
 }
 
 img {
@@ -174,10 +167,37 @@ img {
   padding-left: 15px;
 }
 
-.card_txt p {
+.restaurants .card_txt p {
   font-size: 17px;
   font-weight: lighter;
   padding-top: 3px;
 }
 
+footer {
+  background: #353535;
+  height: 186px;
+  padding: 20px;
+}
+footer h4, footer .fa-solid, footer li {
+  color: white;
+  font-size: 16px;
+}
+footer h4 {
+  font-family: "Shrikhand", serif;
+  font-size: 16px;
+  padding-bottom: 10px;
+}
+
+footer .fa-solid {
+  padding-right: 10px;
+}
+footer ul {
+  padding: 0px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+footer > ul > li {
+  list-style-type: none;
+}
 
