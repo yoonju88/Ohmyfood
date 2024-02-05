@@ -5,23 +5,18 @@
 }
 
 .main-container {
-  max-width: 375px;
+  max-width: 768px;
   margin: 0px auto;
 }
 
 h1 {
   font-family: "Shrikhand", serif;
   font-size: 30px;
-  padding-top: 15px;
+  padding-top: 7px;
 }
 
 h2 {
   font-size: 24px;
-}
-
-img {
-  object-fit: cover;
-  width: 100%;
 }
 
 a {
@@ -29,9 +24,24 @@ a {
   text-decoration: none;
 }
 
-h1, .localisation, .fonction_txt {
+h1,
+.localisation,
+.fonction_txt {
   display: flex;
   justify-content: center;
+}
+
+p {
+  font-size: 17px;
+
+}
+
+h3 {
+  font-size: 18px;
+}
+
+header {
+height:60px;
 }
 
 .localisation {
@@ -45,19 +55,16 @@ h1, .localisation, .fonction_txt {
   box-shadow: inset 0px 5px 5px -4px rgba(0, 0, 0, 0.3);
 }
 
-main {
-  padding: 20px;
-}
-
-.presentation, .fonction_txt {
+.presentation,
+.fonction_txt {
   background-color: #f6f6f6;
 }
 
-.presentaion {
+.presentation {
   display: flex;
   text-align: center;
   flex-direction: column;
-  padding: 40px 0px;
+  padding: 40px 0px 50px 0px;
   row-gap: 20px;
   box-shadow: inset 0px 5px 5px -4px rgba(0, 0, 0, 0.3);
   background: #f6f6f6;
@@ -65,10 +72,12 @@ main {
 
 .presentation p {
   font-size: 18px;
-  font-weight: light;
+  font-weight: lighter;
+  padding-bottom: 10px;
 }
 
 .presentation_btn {
+  font-weight: normal;
   padding: 15px 20px;
   border: none;
   background: linear-gradient(#ff79da, #9356dc);
@@ -80,18 +89,15 @@ main {
 }
 
 .section-title {
-  margin-top: 50px;
-  margin-bottom: 15px;
-  font-weight: 700;
+  margin-bottom: 20px;
+  font-weight: bold;
   font-size: 24px;
 }
 
 .fonction {
-  padding: 0px 20px;
+  padding: 40px 20px;
 }
-.fonction section-title {
-  margin-bottom: 10px;
-}
+
 .fonction .fonction_content {
   display: flex;
   align-content: center;
@@ -99,6 +105,7 @@ main {
   margin-top: 20px;
   position: relative;
 }
+
 .fonction .fonction_n {
   background: #9356dc;
   border-radius: 20px;
@@ -106,8 +113,10 @@ main {
   color: white;
   position: absolute;
 }
+
 .fonction .fonction_txt {
   font-size: 17px;
+  font-weight: normal;
   width: 100%;
   column-gap: 20px;
   align-items: center;
@@ -116,9 +125,59 @@ main {
   border-radius: 20px;
   box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.15);
 }
+
 .fonction i {
   color: #7e7e7e;
+  font-size: 20px;
 }
+
 .fonction i:hover {
   color: #9356dc;
 }
+
+.restaurants {
+  background: #f6f6f6;
+  padding: 40px 20px;
+}
+
+.restaurants .card {
+  width: 100%;
+  height: 250px;
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  position: relative;
+  margin-top: 20px;
+}
+
+img {
+  height: 67%;
+  object-fit: cover;
+  width: 100%;
+}
+
+.restaurants .card_new {
+  position: absolute;
+  background: #99e2d0;
+  padding: 7px 15px;
+  font-size: 14px;
+  font-weight: normal;
+  color: #008766;
+  z-index: 2;
+  top: 10px;
+  right: 10px;
+}
+
+.restaurants .card_txt {
+  color: black;
+  padding-top: 15px;
+  padding-left: 15px;
+}
+
+.card_txt p {
+  font-size: 17px;
+  font-weight: lighter;
+  padding-top: 3px;
+}
+
+
