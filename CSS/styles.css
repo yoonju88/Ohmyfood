@@ -188,6 +188,11 @@ footer h4 {
   padding-bottom: 10px;
 }
 
+footer img {
+  width: 25%;
+  padding-bottom: 20px;
+}
+
 footer .fa-solid {
   padding-right: 10px;
 }
