@@ -1,7 +1,7 @@
 * {
   font-family: "Roboto", serif;
   box-sizing: border-box;
-  margin:0px;
+  margin: 0px;
 }
 
 .main-container {
@@ -9,24 +9,13 @@
   margin: 0px auto;
 }
 
-main {
-  padding: 20px;
-}
-
 h1 {
   font-family: "Shrikhand", serif;
   font-size: 30px;
-  display: flex;
-  justify-content: center;
   padding-top: 15px;
 }
 
-p {
-  font-weight: light;
-}
-
 h2 {
-  font-weight: 700;
   font-size: 24px;
 }
 
@@ -35,9 +24,17 @@ img {
   width: 100%;
 }
 
-.localisation {
+a {
+  padding-top: 10px;
+  text-decoration: none;
+}
+
+h1, .localisation, .fonction_txt {
   display: flex;
   justify-content: center;
+}
+
+.localisation {
   align-items: center;
   background-color: #eaeaea;
   height: 50px;
@@ -45,14 +42,15 @@ img {
   font-size: 16px;
   color: #353535;
   font-weight: 500;
-}
-
-.background_lightgrey {
-  background-color: #f6f6f6;
-}
-
-.shadowinset {
   box-shadow: inset 0px 5px 5px -4px rgba(0, 0, 0, 0.3);
+}
+
+main {
+  padding: 20px;
+}
+
+.presentation, .fonction_txt {
+  background-color: #f6f6f6;
 }
 
 .presentaion {
@@ -61,15 +59,13 @@ img {
   flex-direction: column;
   padding: 40px 0px;
   row-gap: 20px;
+  box-shadow: inset 0px 5px 5px -4px rgba(0, 0, 0, 0.3);
+  background: #f6f6f6;
 }
 
 .presentation p {
+  font-size: 18px;
   font-weight: light;
-}
-
-a {
-  padding-top: 10px;
-  text-decoration: none;
 }
 
 .presentation_btn {
@@ -80,17 +76,14 @@ a {
   border-radius: 25px;
   width: 220px;
   margin: auto;
+  box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.15);
 }
 
 .section-title {
-  padding-left: 20px;
   margin-top: 50px;
+  margin-bottom: 15px;
   font-weight: 700;
   font-size: 24px;
-}
-
-.dropshadow {
-  box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.3);
 }
 
 .fonction {
@@ -99,7 +92,7 @@ a {
 .fonction section-title {
   margin-bottom: 10px;
 }
-.fonction .fonction_box {
+.fonction .fonction_content {
   display: flex;
   align-content: center;
   align-items: center;
@@ -114,15 +107,14 @@ a {
   position: absolute;
 }
 .fonction .fonction_txt {
-  background: #f6f6f6;
+  font-size: 17px;
   width: 100%;
-  display: flex;
-  justify-content: center;
   column-gap: 20px;
   align-items: center;
   height: 72px;
   margin-left: 5%;
   border-radius: 20px;
+  box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.15);
 }
 .fonction i {
   color: #7e7e7e;
