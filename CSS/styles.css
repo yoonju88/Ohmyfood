@@ -192,9 +192,43 @@ img {
   padding-top: 3px;
 }
 
+.restaurants .card-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card-heart {
+  padding-top:5px;
+  padding-right:30px;
+  font-size: 24px;
+  transition: display 0.3s;
+}
+
+.heart1{
+  color:black;
+}
+
+ .heart2 {
+  display: none;
+  color: transparent;
+  background:linear-gradient(#9356dc, #ff79da);
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.card-heart:hover .heart1 {
+  display: none;
+}
+
+.card-heart:hover .heart2 {
+  display: inline;
+}
+
 footer {
   background: #353535;
-  height: 186px;
+  height: 195px;
   padding: 20px;
 }
 footer h4, footer .fa-solid, footer li {
