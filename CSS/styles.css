@@ -40,11 +40,21 @@ height:60px;
   align-items: center;
   background-color: #eaeaea;
   height: 50px;
-  column-gap: 15px;
-  font-size: 16px;
-  font-weight: normal;
-  color: #353535;
+  column-gap: 10px;
+  padding-left:65px;
   box-shadow: inset 0px 5px 5px -4px rgba(0, 0, 0, 0.3);
+}
+
+.localisation input {
+  border: none;
+  background: none;
+  text-align: left;
+  padding-left:5px;
+}
+
+.localisation input[type=search], 
+.fa-location-dot{
+  font-size: 16px;
 }
 
 .presentation,
@@ -142,6 +152,7 @@ height:60px;
   position: relative;
   margin-top: 20px;
   z-index: 1;
+  box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.15);
 }
 
 img {
@@ -190,7 +201,7 @@ footer h4 {
 }
 
 footer img {
-  width: 25%;
+  width: 137px;
   padding-bottom: 20px;
 }
 
@@ -206,4 +217,5 @@ footer ul {
 footer > ul > li {
   list-style-type: none;
 }
+
 
