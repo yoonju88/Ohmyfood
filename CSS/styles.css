@@ -116,7 +116,7 @@ header {
 }
 
 .fonction {
-  padding: 40px 20px;
+  padding: 50px 25px 70px 25px;
 }
 .fonction_content {
   align-content: center;
@@ -165,7 +165,6 @@ header {
   position: relative;
   z-index: 1;
   margin-top: 20px;
-  box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.2);
 }
 .restaurants img {
   height: 70%;
