@@ -1,0 +1,428 @@
+
+//couleurs 
+$primaire:#9356dc;
+$secondaire:#ff79da;
+$Tertiaire:#99e2d0;
+$dark-grey:#353535;
+$light-grey:#f6f6f6;
+$mid-grey:#eaeaea;
+$dark-green:#008766;
+
+//font
+
+$logofont: 'Shrikhand', serif; 
+$mainfont: 'Roboto', serif;
+
+@mixin section-title {
+  font-size:24px;
+  font-weight:bold; 
+}
+@mixin card-title{
+   font-size:18px;
+  font-weight:bold;
+}
+@mixin txt-normal-16px{
+  font-size:16px;
+  font-weight:normal;
+}
+
+@mixin txt-light-16px {
+  font-size:16px;
+  font-weight:lighter;
+}
+
+@mixin txt-light-17px {
+  font-size:17px;
+  font-weight:lighter;
+}
+@mixin txt-light-18px {
+  font-size:18px;
+  font-weight:lighter;
+}
+
+@mixin txt-new {
+  font-size:14px;
+  font-weight:normal;
+  color:$dark-green;
+}
+
+//shadow
+
+@mixin shadowinset {
+box-shadow: inset 0px 5px 5px -4px rgba(0, 0, 0, 0.4);
+}
+
+@mixin shadowinset2 {
+box-shadow: inset 0px 5px 5px -4px rgba(0, 0, 0, 0.4);
+}
+
+@mixin dropshadow {
+box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+@mixin dropshadow-hover {
+box-shadow: 1px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+//background-color
+
+@mixin back_lightgrey {
+  background-color:$light-grey
+}
+
+@mixin gradient-btn {
+background: linear-gradient($secondaire,$primaire);
+}
+
+@mixin gradient-heart {
+background: linear-gradient($primaire,$secondaire);
+}
+
+* {
+  font-family: $mainfont;
+  box-sizing: border-box;
+  margin:0px;
+}
+
+.main-container{
+  max-width:768px;
+  margin:0px auto;
+}
+
+h1 {
+  font-family: $logofont;
+  font-size:29px;
+}
+
+h2 {
+    @include section-title;
+}
+
+a {
+  text-decoration: none;
+  color:white;
+}
+
+img {
+  object-fit: cover;
+}
+
+.section-title { 
+  margin-bottom: 20px;
+  @include section-title;
+}
+
+header,
+.localisation {
+  display:flex;
+  justify-content:center;
+}
+
+header {
+  height:60px;
+  align-items: center;
+}
+
+.localisation {
+   align-items:center;
+   background-color:$mid-grey;
+   height: 50px;
+   column-gap:10px;
+   padding-left:65px;
+   @include shadowinset;
+
+   i {
+    font-size: 15px;
+   }
+
+   input {
+    border:none;
+    background:none;
+    background:none;
+    text-align:left;
+    padding-left:5px;
+    }
+  
+    input[type=text] {
+    @include txt-normal-16px;
+    }
+}
+
+.presentation, 
+.fonction_txt {
+   @include back_lightgrey
+}
+
+.presentation {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  padding: 40px 0px 50px 0px;
+  row-gap:20px;
+  @include shadowinset;
+
+  h2{
+    width:285px;
+    margin:0 auto;
+  }
+
+  p {
+ @include txt-light-18px;
+  padding-bottom:10px;
+  width:315px;
+  margin:0 auto;
+  }
+
+  a {
+   @include txt-normal-16px;
+  padding:15px 20px;
+  @include gradient-btn;
+  border-radius:25px;
+  width:220px;
+  margin:auto;
+  @include dropshadow;
+  transition:opacity 0.3s ease, dropshadow 0.3s ease;
+
+  &:hover {
+   opacity:0.8;
+  @include dropshadow-hover;
+  }
+}
+}
+
+.fonction_content,
+.fonction_txt, 
+.restaurants .card_content{
+  display: flex;
+  align-items: center;
+}
+
+.fonction {  
+  padding:40px 20px;
+
+    &_content {
+    align-content:center;
+    margin-top:20px;
+    position: relative;
+
+    &:hover i {
+      color:$primaire;
+    }
+    }
+  
+    &_n{
+    background:$primaire;
+    border-radius:20px;
+    padding: 5px 10px;
+    color:white;
+    position:absolute;
+    left:0%;
+    font-size:14px;
+    }
+  
+    &_txt {
+    @include txt-normal-16px;
+    width:100%;
+    column-gap:20px;
+    justify-content: flex-start;
+    padding-left: 30px;
+    height:72px;
+    margin-left:17px;
+    border-radius: 20px;
+    @include dropshadow ;
+    }
+  
+    i {
+    color: #7e7e7e;
+     font-size:20px;
+    }
+}
+
+
+.restaurants {
+ background:$light-grey;
+ padding:50px 20px 60px 20px; 
+  
+    .card{
+    width:100%;
+    height:250px;
+    background:white;
+    border-radius:15px;
+    overflow:hidden;
+    position:relative;
+    z-index:1;
+    margin-top:20px;
+    @include dropshadow;
+    }
+    img {
+    height:70%;
+    width: 100%;
+    }
+    .card_new {
+    position:absolute;
+    background:$Tertiaire;
+    padding:7px 15px;
+    @include txt-new;
+    z-index:2;
+    top:10px;
+    right:10px;
+    }
+    .card_txt {
+    color:black;
+    padding-top:10px;
+    padding-left:15px; 
+    }
+    .card_txt p {
+    @include txt-light-17px;
+    padding-top: 3px;
+    }
+    .card_content {
+      justify-content: space-between;
+    }
+}
+
+.card_heart {
+padding-top:5px;
+padding-right:30px;
+font-size:24px;
+transition: display 0.3s;
+    
+   .heart1 {
+   color:black;
+   }
+   
+   .heart2 {
+       display:none;
+       color:transparent;
+       @include gradient-heart;
+       background-clip:text;
+      //  -webkit-background-clip:text;
+   }
+
+&:hover .heart1 {
+    display:none;
+}
+&:hover .heart2 {
+    display:inline;
+}
+}
+
+footer {
+  background: $dark-grey;
+  height:185px;
+  padding:25px;
+
+    & .fa-solid, & li {
+     color:white;
+    font-size:16px;
+     }
+    
+    img {
+    width:100px;
+    }
+  
+    .fa-solid {
+    padding-right:10px; 
+    font-size:13px;
+    }
+   a {
+    display: flex;
+    align-items: center;
+   }
+    ul {
+    padding:15px 0 0 0;
+    display:flex;
+    flex-direction:column;
+    row-gap:8px;
+    }
+  
+    >ul>li {
+    list-style-type: none;
+  }
+}
+
+
+@media screen and (min-width:769px) {
+
+    .main-container {
+        max-width:1440px;
+    }
+
+    header {
+        height:96px;
+    }
+    
+    .localisation, .presentation{
+        box-shadow:none;
+    }
+
+    .presentation h2,
+    .presentation p{
+      width:100%;
+    }
+
+    .fonction {
+      padding:60px 180px;
+  
+        &_contents{
+        display:flex;
+        justify-content: space-between;
+        width:100%;
+        }
+    
+        &_content {
+          width:30%;
+          }
+
+    }
+    .restaurants {
+      padding:30px 180px;
+
+      &_cards{
+        flex-wrap:wrap;
+        row-gap: 30px;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      h2{
+        margin-bottom:10px;
+      }
+      
+      a {
+        width:46%;
+        padding-top:0px;
+      }
+    
+      .card {
+        box-shadow:none;
+      }
+    }
+
+footer, 
+footer li {
+  display:flex;
+  flex-direction:row-reverse;
+}
+
+footer {
+  height: 114px;
+  padding: 30px 60px;
+  column-gap: 80px;
+  align-items:flex-end;
+
+  img {
+    width:100px;
+    height:17px;
+  }
+
+  >ul {
+    display:flex;
+    flex-direction:row;
+    column-gap: 10px;;
+  }
+  li:nth-of-type(3){
+    padding-left:30px;
+  }
+}
+}
