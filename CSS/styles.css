@@ -195,25 +195,25 @@ header {
   justify-content: space-between;
 }
 
-.card_heart {
+.heart {
   padding-top: 5px;
   padding-right: 30px;
   font-size: 24px;
   transition: display 0.3s;
 }
-.card_heart .heart1 {
+.heart_1 {
   color: black;
 }
-.card_heart .heart2 {
+.heart_2 {
   display: none;
   color: transparent;
   background: linear-gradient(#9356dc, #ff79da);
   background-clip: text;
 }
-.card_heart:hover .heart1 {
+.heart:hover .heart_1 {
   display: none;
 }
-.card_heart:hover .heart2 {
+.heart:hover .heart_2 {
   display: inline;
 }
 
@@ -314,4 +314,4 @@ footer > ul > li {
   footer li:nth-of-type(3) {
     padding-left: 30px;
   }
-}/*# sourceMappingURL=styles.css.map */
+}

@@ -280,28 +280,27 @@ header {
     }
 }
 
-.card_heart {
+.heart {
 padding-top:5px;
 padding-right:30px;
 font-size:24px;
 transition: display 0.3s;
     
-   .heart1 {
+   &_1 {
    color:black;
    }
    
-   .heart2 {
+   &_2 {
        display:none;
        color:transparent;
        @include gradient-heart;
        background-clip:text;
-      //  -webkit-background-clip:text;
    }
 
-&:hover .heart1 {
+&:hover .heart_1 {
     display:none;
 }
-&:hover .heart2 {
+&:hover .heart_2 {
     display:inline;
 }
 }
