@@ -1,0 +1,256 @@
+//couleurs 
+$primaire:#9356dc;
+$secondaire:#ff79da;
+$Tertiaire:#99e2d0;
+$dark-grey:#353535;
+$light-grey:#f6f6f6;
+$mid-grey:#eaeaea;
+$dark-green:#008766;
+
+//font
+$logofont: 'Shrikhand', serif; 
+$mainfont: 'Roboto', serif;
+
+//gradient 
+@mixin gradient-btn {
+  background: linear-gradient($secondaire,$primaire);
+  }
+
+@mixin gradient-heart {
+  background: linear-gradient($primaire,$secondaire);
+  }
+
+//shadow
+@mixin dropshadow {
+    box-shadow: 1px 3px 6px rgba(0, 0, 0, 0.1);
+    }
+
+@mixin dropshadow-hover {
+      box-shadow: 1px 4px 8px rgba(0, 0, 0, 0.3);
+      }
+
+* {
+    font-family: $mainfont;
+    box-sizing: border-box;
+    margin: 0px;
+  }
+  
+  .main-container {
+    max-width: 768px;
+    margin: 0px auto;
+  }
+  
+  h1, h2 {
+    font-family: $logofont;
+  }
+
+  h1 {
+    font-size: 30px;
+    margin: auto;
+  }
+  
+  h2 {
+    font-size: 28px;
+    letter-spacing:0.2px;
+  }
+
+  img {
+    object-fit: cover;
+  }
+  
+  a {
+    text-decoration: none;
+    color:white;
+  }
+
+  header {
+    height: 60px;
+    display:flex;
+    align-items: center;
+    padding-left: 20px;
+
+    & i {
+      font-size: 16px;
+      color:$dark-grey;
+    }
+  }
+
+ 
+.restaurant_img img{
+  position:relative;
+  height:275px;
+  width:100%;
+  z-index: 1;
+}
+
+.menu {
+    position:absolute;
+    width:100%;
+    height:1307px;
+    margin-top:-50px;
+    background-color: $light-grey;
+    border-radius: 40px 40px 0 0;
+    padding: 30px 15px;
+    z-index: 2;
+
+  &_title {
+    display: flex;
+    align-items: center;
+    column-gap: 30px;
+  }
+    
+  &_cards{
+    padding-top: 15px;
+    padding-bottom:30px;
+    display:flex;
+    flex-direction: column;
+    row-gap: 15px;
+  }
+  a {
+    margin:30px auto;
+    display:flex;
+    justify-content: center;
+   font-size: 16px;
+   padding:15px 20px;
+   @include gradient-btn;
+   border-radius:25px;
+   width:220px;
+   @include dropshadow;
+   transition:opacity 0.3s ease, dropshadow 0.3s ease;
+ 
+   &:hover {
+    opacity:0.8;
+   @include dropshadow-hover;
+   }
+  }
+}
+
+
+h3 {
+  margin-top:30px;
+  font-size: 16px;
+  font-weight:300;
+  border-bottom:3px solid $Tertiaire;
+  padding-bottom: 5px;
+  width:40px;    
+}
+
+.heart {
+  font-size:21px;
+  transition: display 0.3s ease;
+      
+     &_1 {
+     color:black;
+     }
+     
+     &_2 {
+         display:none;
+         color:transparent;
+         @include gradient-heart;
+         background-clip:text;
+     }
+  
+  &:hover .heart_1 {
+      display:none;
+  }
+  &:hover .heart_2 {
+      display:inline;
+  }
+  }
+
+.card {
+padding:0 15px;
+ position:relative;
+ background-color:white;
+ border-radius: 20px;
+ width:100%;
+ height:72px;
+ display:flex;
+ align-items: center;
+ overflow:hidden;
+ @include dropshadow;
+
+ &_content {
+  flex:1;
+ }
+ 
+ &_content h4 {
+  font-size: 18px;
+  font-weight: 400;
+ }
+
+ &_content p {
+  font-size:15px;
+  font-weight: 300;
+  padding-top:3px;
+ }
+ &_price {
+  font-size: 15px;
+  font-weight: 400;
+  margin-left: auto;
+  transition:transform 0.3s ease;
+  padding-bottom: 14px;
+  display:flex;
+  align-self: flex-end;
+ };
+
+&_greenbox {
+  position:absolute;
+  width:70px;
+  right:-100px;
+  height: 100%;
+  border:none;
+  background:$Tertiaire;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  color:white;
+  font-size: 20px;
+  transition:right 0.3s ease;
+}
+
+&:hover .card_greenbox {
+  right:0;
+}
+&:hover .card_price {
+  transform: translateX(-70px);
+}
+}
+
+
+footer {
+  position:absolute;
+  z-index: 3;
+  background: $dark-grey;
+  height:185px;
+  padding:25px;
+  width:100%;
+  top:1550px;
+
+    & .fa-solid, & li {
+     color:white;
+    font-size:16px;
+     }
+    
+    img {
+    width:100px;
+    }
+  
+    .fa-solid {
+    padding-right:10px; 
+    font-size:13px;
+    }
+   a {
+    display: flex;
+    align-items: center;
+   }
+    ul {
+    padding:15px 0 0 0;
+    display:flex;
+    flex-direction:column;
+    row-gap:8px;
+    }
+    >ul>li {
+    list-style-type: none;
+  }
+}
