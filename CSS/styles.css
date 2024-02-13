@@ -16,7 +16,7 @@ h1 {
 
 h2 {
   font-size: 24px;
-  font-weight: bold;
+  font-weight: 700;
 }
 
 a {
@@ -31,7 +31,7 @@ img {
 .section-title {
   margin-bottom: 20px;
   font-size: 24px;
-  font-weight: bold;
+  font-weight: 700;
 }
 
 header,
@@ -65,7 +65,7 @@ header {
 }
 .localisation input[type=text] {
   font-size: 16px;
-  font-weight: normal;
+  font-weight: 400;
 }
 
 .presentation,
@@ -87,14 +87,14 @@ header {
 }
 .presentation p {
   font-size: 18px;
-  font-weight: lighter;
+  font-weight: 300;
   padding-bottom: 10px;
   width: 315px;
   margin: 0 auto;
 }
 .presentation a {
   font-size: 16px;
-  font-weight: normal;
+  font-weight: 400;
   padding: 15px 20px;
   background: linear-gradient(#ff79da, #9356dc);
   border-radius: 25px;
@@ -137,7 +137,7 @@ header {
 }
 .fonction_txt {
   font-size: 16px;
-  font-weight: normal;
+  font-weight: 400;
   width: 100%;
   column-gap: 20px;
   justify-content: flex-start;
@@ -175,7 +175,7 @@ header {
   background: #99e2d0;
   padding: 7px 15px;
   font-size: 14px;
-  font-weight: normal;
+  font-weight: 400;
   color: #008766;
   z-index: 2;
   top: 10px;
@@ -188,7 +188,7 @@ header {
 }
 .restaurants .card_txt p {
   font-size: 17px;
-  font-weight: lighter;
+  font-weight: 300;
   padding-top: 3px;
 }
 .restaurants .card_content {

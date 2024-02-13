@@ -15,34 +15,34 @@ $mainfont: 'Roboto', serif;
 
 @mixin section-title {
   font-size:24px;
-  font-weight:bold; 
+  font-weight:700; 
 }
 @mixin card-title{
    font-size:18px;
-  font-weight:bold;
+  font-weight:700;
 }
 @mixin txt-normal-16px{
   font-size:16px;
-  font-weight:normal;
+  font-weight:400;
 }
 
 @mixin txt-light-16px {
   font-size:16px;
-  font-weight:lighter;
+  font-weight:300;
 }
 
 @mixin txt-light-17px {
   font-size:17px;
-  font-weight:lighter;
+  font-weight:300;
 }
 @mixin txt-light-18px {
   font-size:18px;
-  font-weight:lighter;
+  font-weight:300;
 }
 
 @mixin txt-new {
   font-size:14px;
-  font-weight:normal;
+  font-weight:400;
   color:$dark-green;
 }
 
@@ -174,7 +174,7 @@ header {
   }
 
   a {
-   @include txt-normal-16px;
+  @include txt-normal-16px;
   padding:15px 20px;
   @include gradient-btn;
   border-radius:25px;

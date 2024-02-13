@@ -74,13 +74,13 @@ header i {
 }
 .menu a {
   margin: 30px auto;
-  display: flex;
-  justify-content: center;
+  display: block;
+  text-align: center;
   font-size: 16px;
   padding: 15px 20px;
-  background: linear-gradient(#ff79da, #9356dc);
   border-radius: 25px;
-  width: 220px;
+  width: 186px;
+  background: linear-gradient(#ff79da, #9356dc);
   box-shadow: 1px 3px 6px rgba(0, 0, 0, 0.1);
   transition: opacity 0.3s ease, dropshadow 0.3s ease;
 }

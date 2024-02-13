@@ -108,20 +108,20 @@ $mainfont: 'Roboto', serif;
   }
   a {
     margin:30px auto;
-    display:flex;
-    justify-content: center;
-   font-size: 16px;
-   padding:15px 20px;
-   @include gradient-btn;
-   border-radius:25px;
-   width:220px;
-   @include dropshadow;
-   transition:opacity 0.3s ease, dropshadow 0.3s ease;
+    display:block;
+    text-align: center;
+    font-size: 16px;
+    padding:15px 20px;
+    border-radius:25px;
+    width:186px;
+    @include gradient-btn;
+    @include dropshadow;
+    transition:opacity 0.3s ease, dropshadow 0.3s ease;
  
-   &:hover {
-    opacity:0.8;
-   @include dropshadow-hover;
-   }
+    &:hover {
+      opacity:0.8;
+      @include dropshadow-hover;
+    }
   }
 }
 
