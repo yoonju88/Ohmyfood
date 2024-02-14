@@ -101,7 +101,7 @@ h3 {
 
 .heart {
   font-size: 21px;
-  transition: display 0.3s ease;
+  transition: display 0.3s ease-in-out;
 }
 .heart_1 {
   color: black;
@@ -135,6 +135,7 @@ h3 {
   flex: 1;
   overflow: hidden;
   text-overflow: ellipsis;
+  margin-right: auto;
 }
 .card h4 {
   font-size: 17px;
@@ -148,15 +149,15 @@ h3 {
 .card_price {
   font-weight: 400;
   margin-left: auto;
-  transition: transform 0.3s ease;
   padding-bottom: 14px;
   display: flex;
   align-self: flex-end;
+  transition: transform 0.2s ease-in-out;
 }
 .card_greenbox {
   position: absolute;
   width: 70px;
-  right: -100px;
+  right: -80px;
   height: 100%;
   border: none;
   background: #99e2d0;
@@ -165,10 +166,10 @@ h3 {
   align-items: center;
   color: white;
   font-size: 20px;
-  transition: right 0.3s ease;
+  transition: transform 0.3s ease-in;
 }
 .card:hover .card_greenbox {
-  right: 0;
+  right: 0px;
 }
 .card:hover .card_price {
   transform: translateX(-70px);
@@ -206,7 +207,73 @@ footer > ul > li {
   list-style-type: none;
 }
 
-@media screen and (min-width: 769px) {
+.y_slide {
+  transform-origin: 50% top;
+  transform: scaleY(1);
+  animation: anim_y 0.5s ease-in-out;
+}
+
+@keyframes anim_y {
+  0% {
+    transform: scaleY(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
+.opacity {
+  transform-origin: ease-in-out;
+  transform: scale(1);
+  animation: btn 2.2s ease-in-out;
+}
+
+@keyframes btn {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(0, 1);
+    opacity: 0.5;
+  }
+  90% {
+    transform: scale(1.05, 1.1);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+.x_slide-1, .x_slide-2, .x_slide-3 {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+.x_slide-1 {
+  animation: anim_x 1s ease-in-out;
+}
+.x_slide-2 {
+  animation: anim_x 1.5s ease-in-out;
+}
+.x_slide-3 {
+  animation: anim_x 2s ease-in-out;
+}
+
+@keyframes anim_x {
+  0% {
+    transform: scaleX(0);
+    opacity: 0;
+  }
+  89% {
+    transform: scaleX(1.05);
+  }
+  100% {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+}
+@media screen and (min-width: 768px) {
   .main-container {
     max-width: 1440px;
   }
@@ -218,7 +285,7 @@ footer > ul > li {
   }
   .menu {
     width: 75%;
-    transform: translateX(16.5%);
+    right: -12.5%;
     height: 1310px;
   }
   .menu_title {

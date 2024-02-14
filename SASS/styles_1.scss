@@ -91,12 +91,13 @@ $mainfont: 'Roboto', serif;
     background-color: $light-grey;
     border-radius: 40px 40px 0 0;
     padding: 30px 15px;
-    z-index: 2;
+    z-index: 2;    
 
   &_title {
     display: flex;
     align-items: center;
     column-gap: 30px;
+    
   }
     
   &_cards{
@@ -106,6 +107,7 @@ $mainfont: 'Roboto', serif;
     flex-direction: column;
     row-gap: 15px;
   }
+  
   a {
     margin:30px auto;
     display:flex;
@@ -126,7 +128,6 @@ $mainfont: 'Roboto', serif;
   }
 }
 
-
 h3 {
   margin-top:30px;
   font-size: 16px;
@@ -138,7 +139,7 @@ h3 {
 
 .heart {
   font-size:21px;
-  transition: display 0.3s ease;
+  transition: display 0.3s ease-in-out;
       
      &_1 {
      color:black;
@@ -175,6 +176,7 @@ h3 {
   flex:1;
   overflow: hidden;
   text-overflow: ellipsis;
+  margin-right: auto;
 }
 
   h4 {
@@ -191,16 +193,16 @@ h3 {
  &_price {
   font-weight: 400;
   margin-left: auto;
-  transition:transform 0.3s ease;
   padding-bottom: 14px;
   display:flex;
   align-self: flex-end;
- };
+  transition:transform 0.2s ease-in-out;
+ }
 
 &_greenbox {
   position:absolute;
   width:70px;
-  right:-100px;
+  right:-80px;
   height: 100%;
   border:none;
   background:$Tertiaire;
@@ -209,17 +211,16 @@ h3 {
   align-items: center;
   color:white;
   font-size: 20px;
-  transition:right 0.3s ease;
+  transition: transform 0.3s ease-in;
 }
 
 &:hover .card_greenbox {
-  right:0;
+  right:0px;
 }
 &:hover .card_price {
   transform: translateX(-70px);
 }
 }
-
 
 footer {
   position:relative;
@@ -229,39 +230,115 @@ footer {
   width:100%;
 
     & .fa-solid, & li {
-     color:white;
-    font-size:16px;
-     }
+      color:white;
+      font-size:16px;
+      }
     
     img {
-    width:100px;
-    }
+      width:100px;
+      }
   
     .fa-solid {
-    padding-right:10px; 
-    font-size:13px;
+      padding-right:10px; 
+      font-size:13px;
     }
    a {
-    display: flex;
-    align-items: center;
+      display: flex;
+      align-items: center;
    }
     ul {
-    padding:15px 0 0 0;
-    display:flex;
-    flex-direction:column;
-    row-gap:8px;
+      padding:15px 0 0 0;
+      display:flex;
+      flex-direction:column;
+      row-gap:8px;
     }
     >ul>li {
-    list-style-type: none;
+      list-style-type: none;
+  }
+}
+
+.y_slide{
+  transform-origin: 50% top;
+  transform:scaleY(1);
+  animation:anim_y 0.5s ease-in-out;
+}
+@keyframes anim_y {
+  0% {
+  transform:scaleY(0);
+  opacity:0;
+  }
+  100%{
+  transform:scaleY(1);
+  opacity:1;
+  }
+}
+.opacity {
+  transform-origin: ease-in-out;
+  transform: scale(1);
+  animation: btn 2.2s ease-in-out;
+}
+
+@keyframes btn{
+  0% {
+    transform: scale(0);
+    opacity:0;
+    }
+    50%{
+      transform: scale(0, 1);
+      opacity:0.5;
+    }
+
+    90% {
+      transform: scale(1.05, 1.1);
+    }
+    100%{
+      transform: scale(1);
+      opacity:1;
+    }
+}
+
+@mixin x_direction{
+  transform-origin:left;
+  transform:scaleX(1);
+}
+
+.x_slide {
+ &-1, &-2, &-3 {
+  @include x_direction;
+ }
+ 
+ &-1 {
+  animation: anim_x 1s ease-in-out;
+ }
+ &-2 {
+  animation: anim_x 1.5s ease-in-out;
+ }
+ &-3 {
+  animation: anim_x 2s ease-in-out;
+ }
+}
+
+@keyframes anim_x {
+  0%{
+    transform:scaleX(0);
+    opacity:0;
+  }
+
+  89%{
+    transform:scaleX(1.05);
+  }
+
+  100%{
+    transform:scaleX(1);
+    opacity:1;
   }
 }
 
 
-@media screen and (min-width:769px) {
+@media screen and (min-width:768px) {
 
   .main-container {
     max-width:1440px;
-    
 }
 
 header {
@@ -274,11 +351,11 @@ header {
 
 .menu {
   width:75%;
-  transform: translateX(16.5%);
+  right:-12.5%;
   height:1310px;
 
   &_title {
-padding-top: 30px;
+    padding-top: 30px;
     justify-content: center;
   }
   &_total{
@@ -315,4 +392,3 @@ footer {
   }
 }
 }
-
