@@ -195,13 +195,13 @@ h3 {
   padding-bottom: 14px;
   display:flex;
   align-self: flex-end;
-  transition:transform 0.2s ease-in-out;
+  transition:transform 0.3s ease;
  }
 
 &_greenbox {
   position:absolute;
   width:70px;
-  right:-80px;
+  right:-100px;
   height: 100%;
   border:none;
   background:$Tertiaire;
@@ -210,11 +210,11 @@ h3 {
   align-items: center;
   color:white;
   font-size: 20px;
-  transition: transform 0.3s ease-in;
+  transition: transform 0.5s ease-in-out;
 }
 
 &:hover .card_greenbox {
-  right:0px;
+  right:0;
 }
 &:hover .card_price {
   transform: translateX(-70px);
@@ -224,7 +224,7 @@ h3 {
 footer {
   position:relative;
   z-index: 3;
-  background: $dark-grey;
+  background:$dark-grey;
   padding:25px;
   width:100%;
 
@@ -351,7 +351,6 @@ header {
 .menu {
   width:75%;
   right:-12.5%;
-  height:1310px;
 
   &_title {
     padding-top: 30px;
