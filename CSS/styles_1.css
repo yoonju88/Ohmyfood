@@ -15,7 +15,7 @@ h1, h2 {
 
 h1 {
   font-size: 30px;
-  margin: auto;
+  margin-left: calc(50% - 130px);
 }
 
 h2 {
@@ -36,9 +36,9 @@ header {
   height: 60px;
   display: flex;
   align-items: center;
-  padding-left: 20px;
 }
 header i {
+  padding-left: 15px;
   font-size: 16px;
   color: #353535;
 }
@@ -51,9 +51,9 @@ header i {
 }
 
 .menu {
-  position: absolute;
+  position: relative;
   width: 100%;
-  height: 1307px;
+  height: 1250px;
   margin-top: -50px;
   background-color: #f6f6f6;
   border-radius: 40px 40px 0 0;
@@ -74,8 +74,9 @@ header i {
 }
 .menu a {
   margin: 30px auto;
-  display: block;
+  display: flex;
   text-align: center;
+  justify-content: center;
   font-size: 16px;
   padding: 15px 20px;
   border-radius: 25px;
@@ -132,18 +133,19 @@ h3 {
 }
 .card_content {
   flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
-.card_content h4 {
-  font-size: 18px;
+.card h4 {
+  font-size: 17px;
   font-weight: 400;
 }
-.card_content p {
-  font-size: 15px;
+.card p {
+  font-size: 14px;
   font-weight: 300;
   padding-top: 3px;
 }
 .card_price {
-  font-size: 15px;
   font-weight: 400;
   margin-left: auto;
   transition: transform 0.3s ease;
@@ -173,13 +175,11 @@ h3 {
 }
 
 footer {
-  position: absolute;
+  position: relative;
   z-index: 3;
   background: #353535;
-  height: 185px;
   padding: 25px;
   width: 100%;
-  top: 1550px;
 }
 footer .fa-solid, footer li {
   color: white;
@@ -205,3 +205,52 @@ footer ul {
 footer > ul > li {
   list-style-type: none;
 }
+
+@media screen and (min-width: 769px) {
+  .main-container {
+    max-width: 1440px;
+  }
+  header {
+    height: 96px;
+  }
+  .restaurant_img img {
+    height: 383px;
+  }
+  .menu {
+    width: 75%;
+    transform: translateX(16.5%);
+    height: 1310px;
+  }
+  .menu_title {
+    padding-top: 30px;
+    justify-content: center;
+  }
+  .menu_total {
+    padding: 20px 0;
+    width: 65%;
+    margin: 0 auto;
+  }
+  footer,
+  footer li {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  footer {
+    height: 114px;
+    padding: 30px 60px;
+    column-gap: 90px;
+    align-items: flex-end;
+  }
+  footer img {
+    width: 100px;
+    height: 17px;
+  }
+  footer > ul {
+    display: flex;
+    flex-direction: row;
+    column-gap: 10px;
+  }
+  footer li:nth-of-type(3) {
+    padding-left: 30px;
+  }
+}/*# sourceMappingURL=styles_1.css.map */

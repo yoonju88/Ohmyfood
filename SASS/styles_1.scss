@@ -34,7 +34,7 @@ $mainfont: 'Roboto', serif;
     box-sizing: border-box;
     margin: 0px;
   }
-  
+
   .main-container {
     max-width: 768px;
     margin: 0px auto;
@@ -46,7 +46,7 @@ $mainfont: 'Roboto', serif;
 
   h1 {
     font-size: 30px;
-    margin: auto;
+    margin-left: calc(50% - 130px);
   }
   
   h2 {
@@ -65,11 +65,11 @@ $mainfont: 'Roboto', serif;
 
   header {
     height: 60px;
-    display:flex;
+    display: flex;
     align-items: center;
-    padding-left: 20px;
 
     & i {
+      padding-left:15px;
       font-size: 16px;
       color:$dark-grey;
     }
@@ -84,9 +84,9 @@ $mainfont: 'Roboto', serif;
 }
 
 .menu {
-    position:absolute;
+    position:relative;
     width:100%;
-    height:1307px;
+    height:1250px;
     margin-top:-50px;
     background-color: $light-grey;
     border-radius: 40px 40px 0 0;
@@ -108,8 +108,9 @@ $mainfont: 'Roboto', serif;
   }
   a {
     margin:30px auto;
-    display:block;
+    display:flex;
     text-align: center;
+    justify-content: center;
     font-size: 16px;
     padding:15px 20px;
     border-radius:25px;
@@ -159,7 +160,7 @@ h3 {
   }
 
 .card {
-padding:0 15px;
+ padding:0 15px;
  position:relative;
  background-color:white;
  border-radius: 20px;
@@ -170,22 +171,24 @@ padding:0 15px;
  overflow:hidden;
  @include dropshadow;
 
- &_content {
+&_content{
   flex:1;
- }
- 
- &_content h4 {
-  font-size: 18px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+  h4 {
+  font-size: 17px;
   font-weight: 400;
  }
 
- &_content p {
-  font-size:15px;
+  p {
+  font-size:14px;
   font-weight: 300;
   padding-top:3px;
  }
+ 
  &_price {
-  font-size: 15px;
   font-weight: 400;
   margin-left: auto;
   transition:transform 0.3s ease;
@@ -219,13 +222,11 @@ padding:0 15px;
 
 
 footer {
-  position:absolute;
+  position:relative;
   z-index: 3;
   background: $dark-grey;
-  height:185px;
   padding:25px;
   width:100%;
-  top:1550px;
 
     & .fa-solid, & li {
      color:white;
@@ -254,3 +255,64 @@ footer {
     list-style-type: none;
   }
 }
+
+
+@media screen and (min-width:769px) {
+
+  .main-container {
+    max-width:1440px;
+    
+}
+
+header {
+  height: 96px;
+}
+
+.restaurant_img img{
+  height:383px;
+}
+
+.menu {
+  width:75%;
+  transform: translateX(16.5%);
+  height:1310px;
+
+  &_title {
+padding-top: 30px;
+    justify-content: center;
+  }
+  &_total{
+    padding:20px 0;
+    width:65%;
+    margin:0 auto;
+  }
+}
+
+footer, 
+footer li {
+  display:flex;
+  flex-direction:row-reverse;
+}
+
+footer {
+  height: 114px;
+  padding: 30px 60px;
+  column-gap: 90px;
+  align-items:flex-end;
+   
+  img {
+    width:100px;
+    height:17px;
+  }
+
+  >ul {
+    display:flex;
+    flex-direction:row;
+    column-gap: 10px;;
+  }
+  li:nth-of-type(3){
+    padding-left:30px;
+  }
+}
+}
+
