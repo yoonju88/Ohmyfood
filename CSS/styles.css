@@ -262,7 +262,7 @@ footer > ul > li {
     width: 100%;
   }
   .fonction {
-    padding: 60px 180px;
+    padding: 60px 13%;
   }
   .fonction_contents {
     display: flex;
@@ -273,7 +273,7 @@ footer > ul > li {
     width: 30%;
   }
   .restaurants {
-    padding: 30px 180px;
+    padding: 30px 12%;
   }
   .restaurants_cards {
     flex-wrap: wrap;
@@ -299,7 +299,7 @@ footer > ul > li {
   footer {
     height: 114px;
     padding: 30px 60px;
-    column-gap: 80px;
+    column-gap: 90px;
     align-items: flex-end;
   }
   footer img {
@@ -314,4 +314,4 @@ footer > ul > li {
   footer li:nth-of-type(3) {
     padding-left: 30px;
   }
-}
+}/*# sourceMappingURL=styles.css.map */

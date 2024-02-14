@@ -360,7 +360,7 @@ footer {
     }
 
     .fonction {
-      padding:60px 180px;
+      padding:60px 13%;
   
         &_contents{
         display:flex;
@@ -374,7 +374,7 @@ footer {
 
     }
     .restaurants {
-      padding:30px 180px;
+      padding:30px 12%;
 
       &_cards{
         flex-wrap:wrap;
@@ -406,7 +406,7 @@ footer li {
 footer {
   height: 114px;
   padding: 30px 60px;
-  column-gap: 80px;
+  column-gap: 90px;
   align-items:flex-end;
 
   img {
