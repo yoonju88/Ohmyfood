@@ -247,6 +247,151 @@ footer > ul > li {
   list-style-type: none;
 }
 
+.loading-a {
+  animation: animateon 3s ease-in;
+}
+
+@keyframes animateon {
+  0% {
+    background: #9356dc;
+  }
+  50% {
+    background: #ff79da;
+  }
+  95% {
+    background: #9356dc;
+  }
+  100% {
+    background-color: white;
+  }
+}
+.loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  opacity: 1;
+  visibility: hidden;
+  animation: hideLoading 3s ease-in-out;
+}
+.loading h1 {
+  font-size: 100px;
+  position: relative;
+  top: -100px;
+  color: white;
+  text-align: center;
+  visibility: hidden;
+  animation: logo 3s ease-in;
+}
+
+@keyframes hideLoading {
+  0% {
+    opacity: 1;
+    visibility: visible;
+  }
+  95% {
+    opacity: 1;
+  }
+  100% {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+@keyframes logo {
+  0% {
+    opacity: 0;
+    scale: 0.5;
+    visibility: visible;
+  }
+  15% {
+    opacity: 1;
+    scale: 1.1;
+  }
+  20% {
+    scale: 0.98;
+  }
+  25% {
+    scale: 1;
+  }
+  95% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+.loading_in {
+  transform: translateY(-50%);
+  top: 50%;
+  margin-top: -50px;
+  width: calc(100% - 200px);
+  color: white;
+  padding: 0 100px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  column-gap: 10px;
+}
+.loading_in i {
+  font-size: 40px;
+  opacity: 0;
+  display: inline-block;
+  animation: hearts 2s ease-in;
+}
+
+@keyframes hearts {
+  0% {
+    opacity: 0;
+    scale: 1.5;
+  }
+  20% {
+    opacity: 1;
+    scale: 1;
+  }
+  30% {
+    scale: 0.8;
+  }
+  40% {
+    scale: 1;
+  }
+  60% {
+    scale: 0.8;
+  }
+  70% {
+    scale: 1;
+  }
+  80% {
+    scale: 0.8;
+  }
+  90% {
+    opacity: 1;
+    scale: 1;
+  }
+  100% {
+    scale: 0.8;
+  }
+}
+.main-container {
+  animation: animateoff 3s linear;
+}
+
+@keyframes animateoff {
+  0% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 @media screen and (min-width: 769px) {
   .main-container {
     max-width: 1440px;
