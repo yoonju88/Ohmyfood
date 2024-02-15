@@ -51,7 +51,7 @@ header {
   height: 50px;
   column-gap: 10px;
   padding-left: 65px;
-  box-shadow: inset 0px 5px 5px -4px rgba(0, 0, 0, 0.4);
+  box-shadow: inset 0px 5px 5px -4px rgba(0, 0, 0, 0.2);
 }
 .localisation i {
   font-size: 15px;
@@ -79,7 +79,7 @@ header {
   flex-direction: column;
   padding: 40px 0px 50px 0px;
   row-gap: 20px;
-  box-shadow: inset 0px 5px 5px -4px rgba(0, 0, 0, 0.4);
+  box-shadow: inset 0px 6px 5px -4px rgba(0, 0, 0, 0.4);
 }
 .presentation h2 {
   width: 285px;

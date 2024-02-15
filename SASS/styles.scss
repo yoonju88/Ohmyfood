@@ -49,11 +49,11 @@ $mainfont: 'Roboto', serif;
 //shadow
 
 @mixin shadowinset {
-box-shadow: inset 0px 5px 5px -4px rgba(0, 0, 0, 0.4);
+box-shadow: inset 0px 5px 5px -4px rgba(0, 0, 0, 0.2);
 }
 
 @mixin shadowinset2 {
-box-shadow: inset 0px 5px 5px -4px rgba(0, 0, 0, 0.4);
+box-shadow: inset 0px 6px 5px -4px rgba(0, 0, 0, 0.4);
 }
 
 @mixin dropshadow {
@@ -159,7 +159,7 @@ header {
   flex-direction: column;
   padding: 40px 0px 50px 0px;
   row-gap:20px;
-  @include shadowinset;
+  @include shadowinset2;
 
   h2{
     width:285px;
