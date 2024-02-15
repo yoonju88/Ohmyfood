@@ -131,10 +131,10 @@ h3 {
   box-shadow: 1px 3px 6px rgba(0, 0, 0, 0.1);
 }
 .card_content {
-  flex: 1;
+  width: 100%;
+  text-wrap: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  margin-right: auto;
 }
 .card h4 {
   font-size: 17px;
@@ -173,6 +173,9 @@ h3 {
 .card:hover .card_price {
   transform: translateX(-70px);
 }
+.card:hover .card_content {
+  width: calc(100% - 150px);
+}
 
 footer {
   position: relative;
@@ -206,13 +209,18 @@ footer > ul > li {
   list-style-type: none;
 }
 
-.y_slide {
-  transform-origin: 50% top;
+.menu_title {
+  transform-origin: top;
   transform: scaleY(1);
-  animation: anim_y 0.5s ease-in-out;
+  animation: slidedown 0.7s ease-in-out;
+}
+.menu_title .heart {
+  transform-origin: center;
+  transform: scaleY(1);
+  animation: ani_scale 2s ease-in-out;
 }
 
-@keyframes anim_y {
+@keyframes slidedown {
   0% {
     transform: scaleY(0);
     opacity: 0;
@@ -222,54 +230,90 @@ footer > ul > li {
     opacity: 1;
   }
 }
-.opacity {
-  transform-origin: ease-in-out;
-  transform: scale(1);
-  animation: btn 2.2s ease-in-out;
-}
-
-@keyframes btn {
+@keyframes ani_scale {
   0% {
     transform: scale(0);
     opacity: 0;
   }
+  45% {
+    transform: scale(0);
+    opacity: 0;
+  }
   50% {
-    transform: scale(0, 1);
-    opacity: 0.5;
+    transform: scale(1.2);
+    opacity: 1;
   }
-  90% {
-    transform: scale(1.05, 1.1);
+  60% {
+    transform: scale(0.9);
+    opacity: 1;
   }
-  100% {
+  65% {
     transform: scale(1);
     opacity: 1;
   }
 }
-.x_slide-1, .x_slide-2, .x_slide-3 {
+.order_btn {
+  transform-origin: center;
+  transform: scale(1);
+  animation: motion_btn 2.5s ease-in-out;
+}
+
+@keyframes motion_btn {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  35% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  36% {
+    transform: scale(0, 1);
+    opacity: 0.5;
+  }
+  60% {
+    transform: scale(1.05, 1.05);
+  }
+  70% {
+    transform: scale(0.97, 0.97);
+    opacity: 1;
+  }
+  80% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.menu_appetizer, .menu_main, .menu_dessert {
   transform-origin: left;
   transform: scaleX(1);
 }
-.x_slide-1 {
-  animation: anim_x 1s ease-in-out;
+.menu_appetizer {
+  animation: motion_x 1s ease-in-out;
 }
-.x_slide-2 {
-  animation: anim_x 1.5s ease-in-out;
+.menu_main {
+  animation: motion_x 1.5s ease-in-out;
 }
-.x_slide-3 {
-  animation: anim_x 2s ease-in-out;
+.menu_dessert {
+  animation: motion_x 2s ease-in-out;
 }
 
-@keyframes anim_x {
+@keyframes motion_x {
   0% {
     transform: scaleX(0);
     opacity: 0;
+  }
+  80% {
+    transform: scaleX(1);
+    opacity: 1;
   }
   89% {
     transform: scaleX(1.015);
   }
   100% {
     transform: scaleX(1);
-    opacity: 1;
   }
 }
 @media screen and (min-width: 768px) {

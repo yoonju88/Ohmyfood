@@ -171,11 +171,11 @@ h3 {
  overflow:hidden;
  @include dropshadow;
 
-&_content{
-  flex:1;
+&_content {
+  width:100%;
+  text-wrap:nowrap;
   overflow: hidden;
-  text-overflow: ellipsis;
-  margin-right: auto;
+  text-overflow:ellipsis;
 }
 
   h4 {
@@ -219,6 +219,9 @@ h3 {
 &:hover .card_price {
   transform: translateX(-70px);
 }
+&:hover .card_content{
+ width: calc(100% - 150px);
+}
 }
 
 footer {
@@ -256,71 +259,117 @@ footer {
   }
 }
 
-.y_slide{
-  transform-origin: 50% top;
-  transform:scaleY(1);
-  animation:anim_y 0.5s ease-in-out;
-}
-@keyframes anim_y {
-  0% {
-  transform:scaleY(0);
-  opacity:0;
+.menu_title{
+  transform-origin: top;
+  transform: scaleY(1);
+  animation: slidedown 0.7s ease-in-out;
+  
+  & .heart {
+    transform-origin: center;
+    transform: scaleY(1);
+    animation: ani_scale 2s ease-in-out;
   }
-  100%{
-  transform:scaleY(1);
-  opacity:1;
-  }
-}
-.opacity {
-  transform-origin: ease-in-out;
-  transform: scale(1);
-  animation: btn 2.2s ease-in-out;
 }
 
-@keyframes btn{
+@keyframes slidedown {
   0% {
+  transform: scaleY(0);
+  opacity: 0;
+  }
+  100%{
+  transform: scaleY(1);
+  opacity: 1;
+  }
+}
+
+@keyframes ani_scale {
+  0% {
+    transform:scale(0);
+    opacity:0;
+  }
+
+  45%{
+    transform:scale(0);
+    opacity:0;
+  }
+
+  50%{
+    transform:scale(1.2);
+    opacity:1;
+  }
+  60%{
+    transform:scale(0.9);
+    opacity:1;
+  }
+
+  65%{
+    transform:scale(1);
+    opacity:1;
+  }
+
+}
+
+
+.order_btn {
+  transform-origin: center;
+  transform: scale(1);
+  animation: motion_btn 2.5s ease-in-out;
+}
+
+@keyframes motion_btn{
+  0%{
+    transform: scale(0);
+    opacity:0;
+  }
+  35%{
     transform: scale(0);
     opacity:0;
     }
-    50%{
-      transform: scale(0, 1);
-      opacity:0.5;
+  36%{
+    transform: scale(0, 1);
+    opacity:0.5;
     }
-
-    90% {
-      transform: scale(1.05, 1.1);
+  60% {
+    transform: scale(1.05, 1.05);
+    }
+  70%{
+    transform: scale(0.97, 0.97);
+    opacity:1;
+    }
+  80%{
+    transform: scale(1);
+    opacity:1;
     }
     100%{
       transform: scale(1);
-      opacity:1;
     }
 }
 
-@mixin x_direction{
+.menu {
+ &_appetizer, &_main, &_dessert {
   transform-origin:left;
   transform:scaleX(1);
-}
-
-.x_slide {
- &-1, &-2, &-3 {
-  @include x_direction;
  }
- 
- &-1 {
-  animation: anim_x 1s ease-in-out;
+ &_appetizer {
+  animation: motion_x 1s ease-in-out;
  }
- &-2 {
-  animation: anim_x 1.5s ease-in-out;
+ &_main {
+  animation: motion_x 1.5s ease-in-out;
  }
- &-3 {
-  animation: anim_x 2s ease-in-out;
+ &_dessert {
+  animation: motion_x 2s ease-in-out;
  }
 }
 
-@keyframes anim_x {
+@keyframes motion_x {
   0%{
     transform:scaleX(0);
     opacity:0;
+  }
+
+  80%{
+    transform:scaleX(1);
+    opacity:1;
   }
 
   89%{
@@ -329,7 +378,6 @@ footer {
 
   100%{
     transform:scaleX(1);
-    opacity:1;
   }
 }
 
