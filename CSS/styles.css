@@ -252,16 +252,10 @@ footer > ul > li {
 }
 
 @keyframes animateon {
-  0% {
-    background: #9356dc;
+  from {
+    background: #f6f6f6;
   }
-  50% {
-    background: #ff79da;
-  }
-  95% {
-    background: #9356dc;
-  }
-  100% {
+  to {
     background-color: white;
   }
 }
@@ -279,51 +273,18 @@ footer > ul > li {
   visibility: hidden;
   animation: hideLoading 3s ease-in-out;
 }
-.loading h1 {
-  font-size: 100px;
-  position: relative;
-  top: -100px;
-  color: white;
-  text-align: center;
-  visibility: hidden;
-  animation: logo 3s ease-in;
-}
 
 @keyframes hideLoading {
   0% {
     opacity: 1;
     visibility: visible;
   }
-  95% {
+  85% {
     opacity: 1;
   }
   100% {
     visibility: hidden;
     opacity: 0;
-  }
-}
-@keyframes logo {
-  0% {
-    opacity: 0;
-    scale: 0.5;
-    visibility: visible;
-  }
-  15% {
-    opacity: 1;
-    scale: 1.1;
-  }
-  20% {
-    scale: 0.98;
-  }
-  25% {
-    scale: 1;
-  }
-  95% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-    visibility: hidden;
   }
 }
 .loading_in {
@@ -336,45 +297,57 @@ footer > ul > li {
   text-align: center;
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  align-items: center;
   column-gap: 10px;
 }
 .loading_in i {
-  font-size: 40px;
+  font-size: 30px;
   opacity: 0;
   display: inline-block;
-  animation: hearts 2s ease-in;
+  animation: hearts 3s ease-in;
+}
+.loading_in p {
+  padding-top: 10px;
+  padding-left: 10px;
+  color: #353535;
 }
 
 @keyframes hearts {
   0% {
+    color: #9356dc;
     opacity: 0;
-    scale: 1.5;
+    scale: 0;
+  }
+  5% {
+    opacity: 1;
+    scale: 1.2;
+  }
+  10% {
+    scale: 1;
+    scale: 0.8;
   }
   20% {
-    opacity: 1;
     scale: 1;
+  }
+  25% {
+    scale: 1.03;
   }
   30% {
-    scale: 0.8;
-  }
-  40% {
     scale: 1;
+    color: #ff79da;
   }
-  60% {
-    scale: 0.8;
+  55% {
+    color: #9356dc;
   }
-  70% {
-    scale: 1;
-  }
-  80% {
-    scale: 0.8;
-  }
-  90% {
+  85% {
+    color: #ff79da;
     opacity: 1;
     scale: 1;
   }
   100% {
-    scale: 0.8;
+    opacity: 0;
+    scale: 0;
   }
 }
 .main-container {
