@@ -101,7 +101,7 @@ header {
   width: 220px;
   margin: auto;
   box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.2);
-  transition: opacity 0.3s ease, dropshadow 0.3s ease;
+  transition: opacity 0.3s ease-in-out;
 }
 .presentation a:hover {
   opacity: 0.8;
@@ -317,37 +317,20 @@ footer > ul > li {
   0% {
     color: #9356dc;
     opacity: 0;
-    scale: 0;
-  }
-  5% {
-    opacity: 1;
-    scale: 1.2;
+    transform: scale(1);
   }
   10% {
-    scale: 1;
-    scale: 0.8;
-  }
-  20% {
-    scale: 1;
-  }
-  25% {
-    scale: 1.03;
+    opacity: 0.5;
   }
   30% {
-    scale: 1;
-    color: #ff79da;
-  }
-  55% {
-    color: #9356dc;
-  }
-  85% {
-    color: #ff79da;
     opacity: 1;
-    scale: 1;
+  }
+  50% {
+    color: #ff79da;
   }
   100% {
-    opacity: 0;
-    scale: 0;
+    opacity: 1;
+    transform: scale(1);
   }
 }
 .main-container {

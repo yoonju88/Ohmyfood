@@ -82,7 +82,7 @@ header i {
   width: 186px;
   background: linear-gradient(#ff79da, #9356dc);
   box-shadow: 1px 3px 6px rgba(0, 0, 0, 0.1);
-  transition: opacity 0.3s ease, dropshadow 0.3s ease;
+  transition: opacity 0.3s ease-in-out;
 }
 .menu a:hover {
   opacity: 0.8;
@@ -132,7 +132,7 @@ h3 {
 }
 .card_content {
   width: 100%;
-  text-wrap: nowrap;
+  white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }

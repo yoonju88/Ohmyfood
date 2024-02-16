@@ -75,7 +75,6 @@ $mainfont: 'Roboto', serif;
     }
   }
 
- 
 .restaurant_img img{
   position:relative;
   height:275px;
@@ -118,7 +117,7 @@ $mainfont: 'Roboto', serif;
     width:186px;
     @include gradient-btn;
     @include dropshadow;
-    transition:opacity 0.3s ease, dropshadow 0.3s ease;
+    transition:opacity 0.3s ease-in-out;
  
     &:hover {
       opacity:0.8;
@@ -173,7 +172,7 @@ h3 {
 
 &_content {
   width:100%;
-  text-wrap:nowrap;
+  white-space:nowrap;
   overflow: hidden;
   text-overflow:ellipsis;
 }

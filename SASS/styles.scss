@@ -181,7 +181,7 @@ header {
   width:220px;
   margin:auto;
   @include dropshadow;
-  transition:opacity 0.3s ease, dropshadow 0.3s ease;
+  transition:opacity 0.3s ease-in-out;
 
   &:hover {
    opacity:0.8;
@@ -426,40 +426,22 @@ animation: animateon 3s ease-in;
 
 @keyframes hearts {
   0% {
-color:$primaire;
+    color:$primaire;
     opacity: 0;
-    scale:(0);
+    transform:scale(1);
   }
-  5% {
-    opacity: 1;
-    scale:(1.2);
-  }
-  10% {
-    scale:(1);
-    scale:(0.8);
-  }
-  20% {
-    scale:(1);
-  }
-  25% {
-    scale:(1.03);
+  10%{
+    opacity: 0.5;
   }
   30% {
-    scale:(1);
-    color:$secondaire;
+    opacity: 1;
   }
- 
-  55%{
-    color:$primaire;
-  }
-  85%{
+  50%{
     color:$secondaire;
-    opacity:1;
-    scale:(1);
   }
   100% {
-    opacity:0;
-    scale:(0);
+    opacity:1;
+    transform:scale(1);
   }
 
 }
