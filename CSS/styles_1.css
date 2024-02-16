@@ -130,8 +130,7 @@ h3 {
   overflow: hidden;
   box-shadow: 1px 3px 6px rgba(0, 0, 0, 0.1);
 }
-.card_content {
-  width: 100%;
+.card h4, .card p {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -165,7 +164,7 @@ h3 {
   align-items: center;
   color: white;
   font-size: 20px;
-  transition: transform 0.5s ease-in-out;
+  transition: right 0.3s ease;
 }
 .card:hover .card_greenbox {
   right: 0;
@@ -173,8 +172,8 @@ h3 {
 .card:hover .card_price {
   transform: translateX(-70px);
 }
-.card:hover .card_content {
-  width: calc(100% - 150px);
+.card:hover h4, .card:hover p {
+  width: calc(100% - 100px);
 }
 
 footer {

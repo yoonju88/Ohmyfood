@@ -256,10 +256,12 @@ header {
     z-index:1;
     margin-top:20px;
     }
+
     img {
     height:70%;
     width: 100%;
     }
+
     .card_new {
     position:absolute;
     background:$Tertiaire;
@@ -269,15 +271,18 @@ header {
     top:10px;
     right:10px;
     }
+
     .card_txt {
     color:black;
     padding-top:10px;
     padding-left:15px;
     }
+
     .card_txt p {
     @include txt-light-17px;
     padding-top: 3px;
     }
+
     .card_content {
       justify-content: space-between;
     }
@@ -289,23 +294,24 @@ padding-right:30px;
 font-size:24px;
 transition: display 0.3s;
 
-   &_1 {
+  &_1 {
    color:black;
-   }
+  }
 
-   &_2 {
+  &_2 {
        display:none;
        color:transparent;
        @include gradient-heart;
        background-clip:text;
-   }
+  }
 
-&:hover .heart_1 {
+  &:hover .heart_1 {
     display:none;
-}
-&:hover .heart_2 {
+  }
+
+  &:hover .heart_2 {
     display:inline;
-}
+  }
 }
 
 footer {
@@ -327,10 +333,12 @@ footer {
     padding-right:10px;
     font-size:13px;
     }
+
    a {
     display: flex;
     align-items: center;
    }
+
     ul {
     padding:15px 0 0 0;
     display:flex;
@@ -345,16 +353,6 @@ footer {
 
 // loading-page animation
 
- //background
-.loading-a {
-animation: animateon 3s ease-in;
-}
- @keyframes animateon {
- from {background:$light-grey;} 
- to {background-color: white;}
-}
-
-//logo et loading
 .loading {
   position:fixed;
   top:0;
@@ -366,7 +364,10 @@ animation: animateon 3s ease-in;
   justify-content: center;
   opacity: 1;
   visibility: hidden;
+  background-color: $light-grey;
+  z-index: 2;
   animation: hideLoading 2.5s ease-in-out;
+
   &_in {
     top:50%;
     color:white;
@@ -375,12 +376,14 @@ animation: animateon 3s ease-in;
     justify-content: center;
     flex-direction: column;
     align-items: center;
+
     & i {
       font-size:30px;
       opacity:1;
       transform:scale(1);
       animation: hearts 2.5s ease-in;
     }
+
     & p{
       padding-top:10px;
       padding-left:10px;
@@ -413,17 +416,8 @@ animation: animateon 3s ease-in;
   }
   100% {
     opacity:1;
+    color:$primaire;
   }
-}
-
-.main-container {
-animation: animateoff 2.5s linear;
-}
-
-@keyframes animateoff {
- 0% { opacity:0;}
- 95%{ opacity:0;}
- 100% { opacity:1;}
 }
 
 @media screen and (min-width:768px) {

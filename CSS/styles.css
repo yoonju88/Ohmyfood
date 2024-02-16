@@ -249,18 +249,6 @@ footer > ul > li {
   list-style-type: none;
 }
 
-.loading-a {
-  animation: animateon 3s ease-in;
-}
-
-@keyframes animateon {
-  from {
-    background: #f6f6f6;
-  }
-  to {
-    background-color: white;
-  }
-}
 .loading {
   position: fixed;
   top: 0;
@@ -272,6 +260,8 @@ footer > ul > li {
   justify-content: center;
   opacity: 1;
   visibility: hidden;
+  background-color: #f6f6f6;
+  z-index: 2;
   animation: hideLoading 2.5s ease-in-out;
 }
 .loading_in {
@@ -324,21 +314,7 @@ footer > ul > li {
   }
   100% {
     opacity: 1;
-  }
-}
-.main-container {
-  animation: animateoff 2.5s linear;
-}
-
-@keyframes animateoff {
-  0% {
-    opacity: 0;
-  }
-  95% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
+    color: #9356dc;
   }
 }
 @media screen and (min-width: 768px) {

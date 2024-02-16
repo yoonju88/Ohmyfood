@@ -170,13 +170,11 @@ h3 {
  overflow:hidden;
  @include dropshadow;
 
-&_content {
-  width:100%;
+h4,p {
   white-space:nowrap;
   overflow: hidden;
   text-overflow:ellipsis;
 }
-
   h4 {
   font-size: 17px;
   font-weight: 400;
@@ -209,7 +207,7 @@ h3 {
   align-items: center;
   color:white;
   font-size: 20px;
-  transition: transform 0.5s ease-in-out;
+  transition: right 0.3s ease;
 }
 
 &:hover .card_greenbox {
@@ -218,8 +216,9 @@ h3 {
 &:hover .card_price {
   transform: translateX(-70px);
 }
-&:hover .card_content{
- width: calc(100% - 150px);
+&:hover h4, 
+&:hover p{
+ width: calc(100% - 100px);
 }
 }
 
