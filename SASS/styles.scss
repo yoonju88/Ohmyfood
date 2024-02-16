@@ -138,9 +138,9 @@ header {
    input {
     border:none;
     background:none;
-    background:none;
     text-align:left;
     padding-left:5px;
+    outline:none;
     }
 
     input[type=text] {
@@ -190,8 +190,7 @@ header {
 }
 }
 
-.fonction_content,
-.fonction_txt,
+
 .restaurants .card_content{
   display: flex;
   align-items: center;
@@ -200,11 +199,15 @@ header {
 .fonction {
   padding:50px 25px 70px 25px;
 
+  &_content, &_txt {
+    display: flex;
+    align-items: center;
+  }
+
     &_content {
     align-content:center;
     margin-top:20px;
     position: relative;
-
     &:hover i {
       color:$primaire;
     }
@@ -310,7 +313,8 @@ footer {
   height:185px;
   padding:25px;
 
-    & .fa-solid, & li {
+    & .fa-solid, 
+    & li {
      color:white;
     font-size:16px;
      }
@@ -360,75 +364,43 @@ animation: animateon 3s ease-in;
   display: flex;
   align-items:center;
   justify-content: center;
-  flex-direction: column;
   opacity: 1;
   visibility: hidden;
-  animation: hideLoading 3s ease-in-out;
-  // h1{
-  //   font-size: 100px;
-  //   position:relative;
-  //   top:-100px;
-  //   color:white;
-  //   text-align: center;
-  //   visibility: hidden;
-  //   animation: logo 3s ease-in;
-  // }
+  animation: hideLoading 2.5s ease-in-out;
+  &_in {
+    top:50%;
+    color:white;
+    padding:0 100px;
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    & i {
+      font-size:30px;
+      opacity:1;
+      transform:scale(1);
+      animation: hearts 2.5s ease-in;
+    }
+    & p{
+      padding-top:10px;
+      padding-left:10px;
+      color:$dark-grey;
+    }
+  }
 }
 
 @keyframes hideLoading {
   0% {opacity:1;
   visibility: visible;}
-  85%{opacity:1;}
+  95%{opacity:1;}
   100% {visibility: hidden;
     opacity:0;}
-}
-
-// @keyframes logo {
-//   0% { opacity:0;
-//         scale:0.5;
-//         visibility: visible;}
-//   15% { opacity:1;
-//       scale:1.1;}
-//   20% { scale:0.98;}
-//   25%{scale:1;}
-//   95% {opacity:1;}
-//   100%{opacity:0;
-//     visibility: hidden;}
-// }
-
-.loading_in {
-  transform:translateY(-50%);
-  top:50%;
-  margin-top:-50px;
-  width:calc(100% - 200px);
-  color:white;
-  padding:0 100px;
-  text-align:center;
-  display:flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  column-gap: 10px;
-
-  & i {
-    font-size:30px;
-    opacity:0;
-    display:inline-block;
-    animation: hearts 3s ease-in;
- }
-  & p{
-    padding-top:10px;
-    padding-left:10px;
-    color:$dark-grey;
-  }
-
 }
 
 @keyframes hearts {
   0% {
     color:$primaire;
     opacity: 0;
-    transform:scale(1);
   }
   10%{
     opacity: 0.5;
@@ -441,23 +413,20 @@ animation: animateon 3s ease-in;
   }
   100% {
     opacity:1;
-    transform:scale(1);
   }
-
 }
 
 .main-container {
-animation: animateoff 3s linear;
+animation: animateoff 2.5s linear;
 }
 
 @keyframes animateoff {
  0% { opacity:0;}
- 90%{ opacity:0;}
+ 95%{ opacity:0;}
  100% { opacity:1;}
 }
 
-
-@media screen and (min-width:769px) {
+@media screen and (min-width:768px) {
 
     .main-container {
         max-width:1440px;
