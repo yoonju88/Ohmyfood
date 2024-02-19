@@ -550,6 +550,9 @@ footer > ul > li {
   header {
     height: 96px;
   }
+  .menu_page i {
+    top: 40px;
+  }
   .localisation, .presentation {
     box-shadow: none;
   }
