@@ -11,39 +11,23 @@ $dark-green:#008766;
 //font
 $logofont: 'Shrikhand', serif;
 $mainfont: 'Roboto', serif;
+//font-weight
+$light: 300;
+$medium:400;
+$bold:700;
 
-@mixin section-title {
-  font-size:24px;
-  font-weight:700;
-}
-@mixin card-title{
-   font-size:18px;
-  font-weight:700;
-}
-@mixin txt-normal-16px{
-  font-size:16px;
-  font-weight:400;
+%center-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-@mixin txt-light-16px {
-  font-size:16px;
-  font-weight:300;
+%align-center {
+  display: flex;
+  align-items: center;
 }
 
-@mixin txt-light-17px {
-  font-size:17px;
-  font-weight:300;
-}
-@mixin txt-light-18px {
-  font-size:18px;
-  font-weight:300;
-}
 
-@mixin txt-new {
-  font-size:14px;
-  font-weight:400;
-  color:$dark-green;
-}
 
 //shadow
 
@@ -94,7 +78,8 @@ h1 {
 }
 
 h2 {
-    @include section-title;
+  font-size:24px;
+  font-weight:700;
 }
 
 a {
@@ -115,14 +100,13 @@ img {
 
 header {
   height:60px;
-  display:flex;
-  justify-content:center;
-  align-items: center;
+  @extend %center-center;
 }
 
 // button 
 .btn {
-  @include txt-normal-16px;
+  font-size:16px;
+  font-weight:400;
   padding:15px 20px;
   @include gradient-btn;
   border-radius:25px;
@@ -136,9 +120,9 @@ header {
   &_order {
     margin:30px auto;
     width:186px;
-    display:flex;
-    text-align: center;
+    display: flex;
     justify-content: center;
+    text-align: center;
   }
  &:hover {
   opacity:0.8;
@@ -180,15 +164,17 @@ header {
     }
     
 
-//header for menupages
+//header for pages menus
 .menu_page {
   position:relative;
 
   & i {
     position:absolute;
+    top:22px;
     padding-left:15px;
     font-size: 16px;
     color:$dark-grey;
+  
   }
 
   & h1 {
@@ -240,13 +226,10 @@ footer {
 
 .section-title {
   margin-bottom: 20px;
-  @include section-title;
 }
 
 .localisation {
-  display:flex;
-  justify-content:center;
-   align-items:center;
+  @extend %center-center;
    background-color:$mid-grey;
    height: 50px;
    column-gap:10px;
@@ -266,7 +249,8 @@ footer {
     }
 
     input[type=text] {
-    @include txt-normal-16px;
+      font-size:16px;
+      font-weight:400;
     }
 }
 
@@ -289,7 +273,8 @@ footer {
   }
 
   p {
- @include txt-light-18px;
+  font-size:18px;
+  font-weight:300;
   padding-bottom:10px;
   width:315px;
   margin:0 auto;
@@ -298,16 +283,14 @@ footer {
 
 
 .restaurants .card_content{
-  display: flex;
-  align-items: center;
+  @extend %align-center;
 }
 
 .fonction {
   padding:50px 25px 70px 25px;
 
   &_content, &_txt {
-    display: flex;
-    align-items: center;
+    @extend %align-center;
   }
 
     &_content {
@@ -330,7 +313,8 @@ footer {
     }
 
     &_txt {
-    @include txt-normal-16px;
+    font-size: 16px;
+    font-weight: 400;
     width:100%;
     column-gap:20px;
     justify-content: flex-start;
@@ -361,7 +345,9 @@ footer {
       position:absolute;
       background:$Tertiaire;
       padding:7px 15px;
-      @include txt-new;
+      font-size:14px;
+      font-weight:400;
+      color:$dark-green;
       z-index:2;
       top:10px;
       right:10px;
@@ -377,7 +363,8 @@ footer {
         }
 
     &_txt p {
-      @include txt-light-17px;
+      font-size:17px;
+      font-weight:300;
       padding-top: 3px;
       }
     }
@@ -417,8 +404,7 @@ footer {
   z-index: 2;    
 
 &_title {
-  display: flex;
-  align-items: center;
+  @extend %align-center;
   column-gap: 30px;
 
   &-section {
@@ -440,8 +426,7 @@ footer {
   padding:0 15px;
   border-radius: 20px;
   height:72px;
-  display:flex;
-  align-items: center;
+  @extend %align-center;
   @include dropshadow;
  
   &_cotent{
@@ -480,9 +465,7 @@ footer {
     height: 100%;
     border:none;
     background:$Tertiaire;
-    display:flex;
-    justify-content: center;
-    align-items: center;
+    @extend %center-center;
     color:white;
     font-size: 20px;
     transition: right 0.3s ease;
@@ -509,9 +492,7 @@ footer {
   left:0;
   width:100%;
   height:100%;
-  display: flex;
-  align-items:center;
-  justify-content: center;
+  @extend %center-center;
   opacity: 1;
   visibility: hidden;
   background-color: $light-grey;
@@ -522,10 +503,9 @@ footer {
     top:50%;
     color:white;
     padding:0 100px;
-    display:flex;
-    justify-content: center;
+    @extend %center-center;
     flex-direction: column;
-    align-items: center;
+    
 
     & i {
       font-size:30px;
