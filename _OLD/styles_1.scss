@@ -40,18 +40,8 @@ $mainfont: 'Roboto', serif;
     margin: 0px auto;
   }
   
-  h1, h2 {
-    font-family: $logofont;
-  }
-
   h1 {
-    font-size: 30px;
-    margin-left: calc(50% - 130px);
-  }
-  
-  h2 {
-    font-size: 28px;
-    letter-spacing:0.2px;
+    font-family: $logofont;
   }
 
   img {
@@ -63,15 +53,19 @@ $mainfont: 'Roboto', serif;
     color:white;
   }
 
-  header {
-    height: 60px;
-    display: flex;
-    align-items: center;
+ .menu_page {
+    position:relative;
 
     & i {
+      position:absolute;
       padding-left:15px;
       font-size: 16px;
       color:$dark-grey;
+    }
+
+    & h1 {
+    font-size: 30px;
+    margin:0 auto;
     }
   }
 
@@ -95,9 +89,14 @@ $mainfont: 'Roboto', serif;
     display: flex;
     align-items: center;
     column-gap: 30px;
-    
+
+    &-section {
+      font-family: $logofont;
+      font-size: 28px;
+      letter-spacing:0.2px;
+    }
   }
-    
+
   &_cards{
     padding-top: 15px;
     padding-bottom:30px;
@@ -158,6 +157,7 @@ h3 {
   }
   }
 
+
 .card {
  padding:0 15px;
  position:relative;
@@ -169,6 +169,10 @@ h3 {
  align-items: center;
  overflow:hidden;
  @include dropshadow;
+
+ &_cotent{
+  width:100%;
+ }
 
 h4,p {
   white-space:nowrap;
@@ -188,8 +192,8 @@ h4,p {
  
  &_price {
   font-weight: 400;
-  margin-left: auto;
   padding-bottom: 14px;
+  margin-left:auto;
   display:flex;
   align-self: flex-end;
   transition:transform 0.3s ease;
@@ -216,11 +220,11 @@ h4,p {
 &:hover .card_price {
   transform: translateX(-70px);
 }
-&:hover h4, 
-&:hover p{
- width: calc(100% - 100px);
+  &:hover h4,
+  &:hover p{
+  width: calc(100% - 70px);
 }
-}
+
 
 footer {
   position:relative;
@@ -257,6 +261,7 @@ footer {
   }
 }
 
+//animation menu pages
 .menu{
   &_title{
   transform-origin: top;
@@ -339,7 +344,7 @@ footer {
   }
 }
 
-.order_btn {
+.btn_order {
   transform-origin: center;
   transform: scale(1);
   animation: motion_btn 2.5s ease-in-out;
@@ -404,6 +409,11 @@ header {
   }
 }
 
+.card:hover h4, 
+.card:hover p{
+  width: calc(100% - 0px);
+}
+
 footer, 
 footer li {
   display:flex;
@@ -429,5 +439,6 @@ footer {
   li:nth-of-type(3){
     padding-left:30px;
   }
+}
 }
 }

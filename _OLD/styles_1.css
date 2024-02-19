@@ -9,18 +9,8 @@
   margin: 0px auto;
 }
 
-h1, h2 {
-  font-family: "Shrikhand", serif;
-}
-
 h1 {
-  font-size: 30px;
-  margin-left: calc(50% - 130px);
-}
-
-h2 {
-  font-size: 28px;
-  letter-spacing: 0.2px;
+  font-family: "Shrikhand", serif;
 }
 
 img {
@@ -32,15 +22,18 @@ a {
   color: white;
 }
 
-header {
-  height: 60px;
-  display: flex;
-  align-items: center;
+.menu_page {
+  position: relative;
 }
-header i {
+.menu_page i {
+  position: absolute;
   padding-left: 15px;
   font-size: 16px;
   color: #353535;
+}
+.menu_page h1 {
+  font-size: 30px;
+  margin: 0 auto;
 }
 
 .restaurant_img img {
@@ -63,6 +56,11 @@ header i {
   display: flex;
   align-items: center;
   column-gap: 30px;
+}
+.menu_title-section {
+  font-family: "Shrikhand", serif;
+  font-size: 28px;
+  letter-spacing: 0.2px;
 }
 .menu_cards {
   padding-top: 15px;
@@ -130,6 +128,9 @@ h3 {
   overflow: hidden;
   box-shadow: 1px 3px 6px rgba(0, 0, 0, 0.1);
 }
+.card_cotent {
+  width: 100%;
+}
 .card h4, .card p {
   white-space: nowrap;
   overflow: hidden;
@@ -146,8 +147,8 @@ h3 {
 }
 .card_price {
   font-weight: 400;
-  margin-left: auto;
   padding-bottom: 14px;
+  margin-left: auto;
   display: flex;
   align-self: flex-end;
   transition: transform 0.3s ease;
@@ -173,65 +174,62 @@ h3 {
   transform: translateX(-70px);
 }
 .card:hover h4, .card:hover p {
-  width: calc(100% - 100px);
+  width: calc(100% - 70px);
 }
-
-footer {
+.card footer {
   position: relative;
   z-index: 3;
   background: #353535;
   padding: 25px;
   width: 100%;
 }
-footer .fa-solid, footer li {
+.card footer .fa-solid, .card footer li {
   color: white;
   font-size: 16px;
 }
-footer img {
+.card footer img {
   width: 100px;
 }
-footer .fa-solid {
+.card footer .fa-solid {
   padding-right: 10px;
   font-size: 13px;
 }
-footer a {
+.card footer a {
   display: flex;
   align-items: center;
 }
-footer ul {
+.card footer ul {
   padding: 15px 0 0 0;
   display: flex;
   flex-direction: column;
   row-gap: 8px;
 }
-footer > ul > li {
+.card footer > ul > li {
   list-style-type: none;
 }
-
-.menu_title {
+.card .menu_title {
   transform-origin: top;
   transform: scaleY(1);
   animation: slidedown 0.7s ease-in-out;
 }
-.menu_title .heart {
+.card .menu_title .heart {
   transform-origin: center;
   transform: scaleY(1);
   animation: ani_scale 1.5s ease-in-out;
 }
-.menu_appetizer, .menu_main, .menu_dessert {
+.card .menu_appetizer, .card .menu_main, .card .menu_dessert {
   transform-origin: left;
   transform: scaleX(1);
 }
-.menu_appetizer {
+.card .menu_appetizer {
   animation: motion_x 1s ease-in-out;
 }
-.menu_main {
+.card .menu_main {
   animation: motion_x 1.5s ease-in-out;
 }
-.menu_dessert {
+.card .menu_dessert {
   animation: motion_x 2s ease-in-out;
 }
-
 @keyframes slidedown {
   0% {
     transform: scaleY(0);
@@ -286,12 +284,11 @@ footer > ul > li {
     transform: scaleX(1);
   }
 }
-.order_btn {
+.card .btn_order {
   transform-origin: center;
   transform: scale(1);
   animation: motion_btn 2.5s ease-in-out;
 }
-
 @keyframes motion_btn {
   0% {
     transform: scale(0);
@@ -321,49 +318,53 @@ footer > ul > li {
   }
 }
 @media screen and (min-width: 768px) {
-  .main-container {
+  .card .main-container {
     max-width: 1440px;
   }
-  header {
+  .card header {
     height: 96px;
   }
-  .restaurant_img img {
+  .card .restaurant_img img {
     height: 383px;
   }
-  .menu {
+  .card .menu {
     width: 75%;
     right: -12.5%;
   }
-  .menu_title {
+  .card .menu_title {
     padding-top: 30px;
     justify-content: center;
   }
-  .menu_total {
+  .card .menu_total {
     padding: 20px 0;
     width: 65%;
     margin: 0 auto;
   }
-  footer,
-  footer li {
+  .card .card:hover h4,
+  .card .card:hover p {
+    width: calc(100% - 0px);
+  }
+  .card footer,
+  .card footer li {
     display: flex;
     flex-direction: row-reverse;
   }
-  footer {
+  .card footer {
     height: 114px;
     padding: 30px 60px;
     column-gap: 90px;
     align-items: flex-end;
   }
-  footer img {
+  .card footer img {
     width: 100px;
     height: 17px;
   }
-  footer > ul {
+  .card footer > ul {
     display: flex;
     flex-direction: row;
     column-gap: 10px;
   }
-  footer li:nth-of-type(3) {
+  .card footer li:nth-of-type(3) {
     padding-left: 30px;
   }
 }/*# sourceMappingURL=styles_1.css.map */
