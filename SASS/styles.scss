@@ -28,38 +28,20 @@ $bold:700;
 }
 
 
-
 //shadow
-
-@mixin shadowinset {
-box-shadow: inset 0px 5px 5px -4px rgba(0, 0, 0, 0.2);
+@mixin box-sahdow ($top,$left,$blur,$size,$color) {
+  box-shadow: $top $left $blur $size $color;
 }
 
-@mixin shadowinset2 {
-box-shadow: inset 0px 6px 5px -4px rgba(0, 0, 0, 0.4);
+@mixin sahdow-inset ($top,$left,$blur,$size,$color) {
+  box-shadow: inset $top $left $blur $size $color;
 }
 
-@mixin dropshadow {
-box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.2);
+//gradient-color
+@mixin gradient($color1,$color2) {
+  background: linear-gradient($color1,$color2);
 }
 
-@mixin dropshadow-hover {
-box-shadow: 1px 4px 8px rgba(0, 0, 0, 0.3);
-}
-
-//background-color
-
-@mixin back_lightgrey {
-  background-color:$light-grey
-}
-
-@mixin gradient-btn {
-background: linear-gradient($secondaire,$primaire);
-}
-
-@mixin gradient-heart {
-background: linear-gradient($primaire,$secondaire);
-}
  // common
 * {
   font-family: $mainfont;
@@ -91,6 +73,11 @@ img {
   object-fit: cover;
 }
 
+header {
+  height:60px;
+  @extend %center-center;
+}
+
 .card  {
   position:relative;
   width:100%;
@@ -98,20 +85,15 @@ img {
   background-color:white;
 }
 
-header {
-  height:60px;
-  @extend %center-center;
-}
-
 // button 
 .btn {
   font-size:16px;
   font-weight:400;
   padding:15px 20px;
-  @include gradient-btn;
+  @include gradient ($color1:$secondaire,$color2:$primaire);
   border-radius:25px;
   transition:opacity 0.3s ease-in-out;
-  @include dropshadow;
+  @include box-sahdow($top:1px,$left:2px,$blur:6px,$size:0px,$color:#9b9c9c);
 
   &_presentation {
     width:220px;
@@ -126,7 +108,7 @@ header {
   }
  &:hover {
   opacity:0.8;
- @include dropshadow-hover;
+  @include box-sahdow ($top:1px,$left:3px,$blur:8px,$size:0px,$color:#868889);
  }
 }
 
@@ -141,7 +123,7 @@ header {
      &_2 {
          display:none;
          color:transparent;
-         @include gradient-heart;
+         @include gradient($color1:$primaire,$color2:$secondaire);
          background-clip:text;
      }
   
@@ -234,7 +216,7 @@ footer {
    height: 50px;
    column-gap:10px;
    padding-left:65px;
-   @include shadowinset;
+   @include sahdow-inset ($top:0px,$left:3px,$blur:7px,$size:-4px,$color:#bdbfc0);
 
    i {
     font-size: 15px;
@@ -256,7 +238,7 @@ footer {
 
 .presentation,
 .fonction_txt {
-   @include back_lightgrey
+  background-color:$light-grey;
 }
 
 .presentation {
@@ -265,7 +247,7 @@ footer {
   flex-direction: column;
   padding: 40px 0px 50px 0px;
   row-gap:20px;
-  @include shadowinset2;
+  @include sahdow-inset ($top:0px,$left:8px,$blur:10px,$size:-10px,$color:#4a4b4b);
 
   h2{
     width:285px;
@@ -322,7 +304,7 @@ footer {
     height:72px;
     margin-left:17px;
     border-radius: 20px;
-    @include dropshadow ;
+    @include box-sahdow ($top:1px,$left:3px,$blur:8px,$size:0px,$color:#cacdcd);
     }
 
     i {
@@ -427,7 +409,7 @@ footer {
   border-radius: 20px;
   height:72px;
   @extend %align-center;
-  @include dropshadow;
+  @include box-sahdow ($top:0px,$left:1px,$blur:6px,$size:0px,$color:#cacdcd);
  
   &_cotent{
    width:100%;
