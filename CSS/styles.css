@@ -36,7 +36,8 @@ a {
 }
 
 img {
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 header {
@@ -85,7 +86,8 @@ header {
   display: none;
   color: transparent;
   background: linear-gradient(#9356dc, #ff79da);
-  background-clip: text;
+  -webkit-background-clip: text;
+          background-clip: text;
 }
 .heart:hover .heart_1 {
   display: none;
@@ -157,7 +159,8 @@ footer > ul > li {
 .localisation {
   background-color: #eaeaea;
   height: 50px;
-  column-gap: 10px;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
   padding-left: 65px;
   box-shadow: inset 0px 3px 7px -4px #bdbfc0;
 }
@@ -225,7 +228,8 @@ footer > ul > li {
   font-size: 16px;
   font-weight: 400;
   width: 100%;
-  column-gap: 20px;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
   justify-content: flex-start;
   padding-left: 30px;
   height: 72px;
@@ -236,6 +240,7 @@ footer > ul > li {
 .fonction i {
   color: #7e7e7e;
   font-size: 20px;
+  transition: color 0.3s ease-in-out;
 }
 
 .restaurants {
@@ -303,7 +308,8 @@ footer > ul > li {
   z-index: 2;
 }
 .menu_title {
-  column-gap: 30px;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
 }
 .menu_title-section {
   font-family: "Shrikhand", serif;
@@ -384,9 +390,6 @@ footer > ul > li {
   animation: hideLoading 2.5s ease-in-out;
 }
 .loading_in {
-  top: 50%;
-  color: white;
-  padding: 0 100px;
   flex-direction: column;
 }
 .loading_in i {
@@ -444,17 +447,17 @@ footer > ul > li {
   animation: ani_scale 1.5s ease-in-out;
 }
 .menu_appetizer, .menu_main, .menu_dessert {
-  transform-origin: left;
+  transform-origin: center;
   transform: scaleX(1);
 }
 .menu_appetizer {
   animation: motion_x 1s ease-in-out;
 }
 .menu_main {
-  animation: motion_x 1.5s ease-in-out;
+  animation: motion_x 1.7s ease-in-out;
 }
 .menu_dessert {
-  animation: motion_x 2s ease-in-out;
+  animation: motion_x 2.4s ease-in-out;
 }
 
 @keyframes slidedown {
@@ -555,7 +558,8 @@ footer > ul > li {
   .menu_page i {
     top: 40px;
   }
-  .localisation, .presentation {
+  .localisation,
+  .presentation {
     box-shadow: none;
   }
   .presentation h2,
@@ -605,7 +609,8 @@ footer > ul > li {
     width: 65%;
     margin: 0 auto;
   }
-  .menu h4, .menu p {
+  .menu h4,
+  .menu p {
     max-width: 500px;
   }
   .menu .card:hover h4, .menu .card:hover p {
@@ -619,7 +624,8 @@ footer > ul > li {
   footer {
     height: 114px;
     padding: 30px 60px;
-    column-gap: 90px;
+    -moz-column-gap: 90px;
+         column-gap: 90px;
     align-items: flex-end;
   }
   footer img {
@@ -629,7 +635,8 @@ footer > ul > li {
   footer > ul {
     display: flex;
     flex-direction: row;
-    column-gap: 10px;
+    -moz-column-gap: 10px;
+         column-gap: 10px;
   }
   footer li:nth-of-type(3) {
     padding-left: 30px;
