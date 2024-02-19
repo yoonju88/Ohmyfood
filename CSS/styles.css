@@ -230,6 +230,7 @@ footer .fa-solid, footer li {
 }
 footer img {
   width: 100px;
+  filter: invert(1);
 }
 footer .fa-solid {
   padding-right: 10px;
