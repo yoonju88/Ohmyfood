@@ -12,12 +12,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="../CSS/styles_1.css">
+    <link rel="stylesheet" href="../CSS/styles.css">
 </head>
 
 <body>
     <div class="main-container">
-        <header>
+        <header class="menu_page">
             <a href="../homepage.html"><i class="fa-solid fa-arrow-left"></i></a>
             <h1>ohmyfood</h1>
         </header>
@@ -28,7 +28,7 @@
             </div>
             <div class="menu">
                 <div class="menu_title">
-                    <h2>La note enchantée</h2>
+                    <h2 class="menu_title-section">La note enchantée</h2>
                     <div class="heart">
                         <span class="heart_1"><i class="fa-regular fa-heart"></i></span>
                         <span class="heart_2"><i class="fa-solid fa-heart"></i></span>
@@ -38,7 +38,7 @@
                     <div class="menu_appetizer">
                         <h3>ENTRÉES</h3>
                         <div class="menu_cards">
-                            <article class="card">
+                            <div class="card">
                                 <div class="card_content">
                                     <h4>Ravioles de foie gras</h4>
                                     <p>Accompagnées de leur crème à la truffe</p>
@@ -47,8 +47,8 @@
                                 <span class="card_greenbox">
                                     <i class="fa-solid fa-circle-check"></i>
                                 </span>
-                            </article>
-                            <article class="card">
+                            </div>
+                            <div class="card">
                                 <div class="card_content">
                                     <h4>Caviar osciètre </h4>
                                     <p>Sur blini à la farine de blé noir</p>
@@ -57,8 +57,8 @@
                                 <span class="card_greenbox">
                                     <i class="fa-solid fa-circle-check"></i>
                                 </span>
-                            </article>
-                            <article class="card">
+                            </div>
+                            <div class="card">
                                 <div class="card_content">
                                     <h4>Homard et espuma de potiron</h4>
                                     <p>Marinés aux zestes d'orange</p>
@@ -67,8 +67,8 @@
                                 <span class="card_greenbox">
                                     <i class="fa-solid fa-circle-check"></i>
                                 </span>
-                            </article>
-                            <article class="card">
+                            </div>
+                            <div class="card">
                                 <div class="card_content">
                                     <h4>Foie gras de canard cuit entier</h4>
                                     <p>Confiture de figue et pain toasté</p>
@@ -77,13 +77,13 @@
                                 <span class="card_greenbox">
                                     <i class="fa-solid fa-circle-check"></i>
                                 </span>
-                            </article>
+                            </div>
                         </div>
                     </div>
                     <div class="menu_main">
                         <h3>PLATS</h3>
                         <div class="menu_cards">
-                            <article class="card">
+                            <div class="card">
                                 <div class="card_content">
                                     <h4>Noix de coquilles Saint-Jacques</h4>
                                     <p>Sur lit de purée de céleri-rave</p>
@@ -92,8 +92,8 @@
                                 <span class="card_greenbox">
                                     <i class="fa-solid fa-circle-check"></i>
                                 </span>
-                            </article>
-                            <article class="card">
+                            </div>
+                            <div class="card">
                                 <div class="card_content">
                                     <h4>Langoustine poêlée</h4>
                                     <p>Purée de patate douce</p>
@@ -102,8 +102,8 @@
                                 <span class="card_greenbox">
                                     <i class="fa-solid fa-circle-check"></i>
                                 </span>
-                            </article>
-                            <article class="card">
+                            </div>
+                            <div class="card">
                                 <div class="card_content">
                                     <h4>Mijoté de queue de bœuf </h4>
                                     <p>Et riz sauvage aux zestes de citron</p>
@@ -112,13 +112,13 @@
                                 <span class="card_greenbox">
                                     <i class="fa-solid fa-circle-check"></i>
                                 </span>
-                            </article>
+                            </div>
                         </div>
                     </div>
                     <div class="menu_dessert">
                         <h3>DESSERTS</h3>
                         <div class="menu_cards">
-                            <article class="card">
+                            <div class="card">
                                 <div class="card_content">
                                     <h4>Macaron noisette et chocolat</h4>
                                     <p>Glace au caramel brun et sel de Guérande</p>
@@ -127,8 +127,8 @@
                                 <span class="card_greenbox">
                                     <i class="fa-solid fa-circle-check"></i>
                                 </span>
-                            </article>
-                            <article class="card">
+                            </div>
+                            <div class="card">
                                 <div class="card_content">
                                     <h4>Baba au rhum revisité </h4>
                                     <p>Avec son coulis de citron</p>
@@ -137,8 +137,8 @@
                                 <span class="card_greenbox">
                                     <i class="fa-solid fa-circle-check"></i>
                                 </span>
-                            </article>
-                            <article class="card">
+                            </div>
+                            <div class="card">
                                 <div class="card_content">
                                     <h4>Tarte au citron meringuée</h4>
                                     <p>Déstructurée</p>
@@ -147,11 +147,11 @@
                                 <span class="card_greenbox">
                                     <i class="fa-solid fa-circle-check"></i>
                                 </span>
-                            </article>
+                            </div>
                         </div>
                     </div>
-                    <div class="order_btn"> 
-                        <a href="#">Commander</a>
+                    <div class="btn btn_order"> 
+                        <a href="#" role="button">Commander</a>
                     </div>
                 </div>
             </div>
