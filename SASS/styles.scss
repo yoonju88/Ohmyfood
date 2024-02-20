@@ -445,12 +445,16 @@ footer {
       $color: #cacdcd
     );
 
+     &_content {
+      width:80%;
+     }
+
     h4,
     p {
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
-      max-width: 300px;
+      width: 100%;
     }
 
     h4 {
@@ -494,7 +498,7 @@ footer {
     }
     &:hover h4,
     &:hover p {
-      width: calc(300px - 100px);
+      width: calc(100% - 90px);
     }
   }
 }
@@ -762,16 +766,6 @@ footer {
       padding: 20px 0;
       width: 65%;
       margin: 0 auto;
-    }
-
-    h4,
-    p {
-      max-width: 500px;
-    }
-
-    & .card:hover h4,
-    & .card:hover p {
-      width: calc(500px - 100px);
     }
   }
 
