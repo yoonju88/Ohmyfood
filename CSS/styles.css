@@ -72,6 +72,7 @@ header {
   text-align: center;
 }
 .btn:hover {
+  cursor: pointer;
   opacity: 0.8;
   box-shadow: 1px 3px 8px 0px #868889;
 }
@@ -377,7 +378,7 @@ footer > ul > li {
   transform: translateX(-70px);
 }
 .menu .card:hover h4, .menu .card:hover p {
-  width: calc(100% - 90px);
+  width: calc(100% - 100px);
 }
 
 .loading {

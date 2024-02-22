@@ -10,6 +10,7 @@ $dark-green: #008766;
 //font
 $logofont: "Shrikhand", serif;
 $mainfont: "Roboto", serif;
+
 //font-weight
 $light: 300;
 $medium: 400;
@@ -91,8 +92,8 @@ header {
   @include gradient($color1: $secondaire, $color2: $primaire);
   border-radius: 25px;
   transition: opacity 0.3s ease-in-out;
-  @include box-shadow(
-    $top: 1px, $left: 2px, $blur: 6px, $size: 0px, $color: #9b9c9c);
+  @include box-shadow
+   ($top: 1px, $left: 2px, $blur: 6px, $size: 0px, $color: #9b9c9c);
 
   &_presentation {
     width: 220px;
@@ -106,9 +107,10 @@ header {
     text-align: center;
   }
   &:hover {
+    cursor: pointer;
     opacity: 0.8;
-    @include box-shadow(
-      $top: 1px, $left: 3px, $blur: 8px, $size: 0px, $color: #868889);
+    @include box-shadow 
+    ($top: 1px, $left: 3px, $blur: 8px, $size: 0px, $color: #868889);
   }
 }
 
@@ -128,7 +130,7 @@ header {
   }
 
   &:hover .heart_1 {
-    display: none;
+    display:none;
   }
   &:hover .heart_2 {
     display: inline;
@@ -214,8 +216,8 @@ footer {
   height: 50px;
   column-gap: 10px;
   padding-left: 65px;
-  @include shadow-inset(
-    $top: 0px, $left: 3px, $blur: 7px, $size: -4px, $color: #bdbfc0);
+  @include shadow-inset
+  ($top: 0px, $left: 3px, $blur: 7px, $size: -4px, $color: #bdbfc0);
 
   i {
     font-size: 15px;
@@ -246,8 +248,8 @@ footer {
   flex-direction: column;
   padding: 40px 0px 50px 0px;
   row-gap: 20px;
-  @include shadow-inset(
-    $top: 0px, $left: 8px, $blur: 10px, $size: -10px, $color: #4a4b4b);
+  @include shadow-inset
+  ($top: 0px, $left: 8px, $blur: 10px, $size: -10px, $color: #4a4b4b);
 
   h2 {
     width: 285px;
@@ -303,8 +305,8 @@ footer {
     height: 72px;
     margin-left: 17px;
     border-radius: 20px;
-    @include box-shadow(
-      $top: 1px, $left: 3px, $blur: 8px, $size: 0px, $color: #cacdcd);
+    @include box-shadow
+    ($top: 1px, $left: 3px, $blur: 8px, $size: 0px, $color: #cacdcd);
   }
 
   i {
@@ -467,7 +469,7 @@ footer {
     }
     &:hover h4,
     &:hover p {
-      width: calc(100% - 90px);
+      width: calc(100% - 100px);
     }
   }
 }
