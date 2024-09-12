@@ -1,0 +1,3 @@
+# Oh my food
+
+Dans ce projet, j’ai travaillé sur l’interface mobile-first du site d’une start-up en utilisant Sass, des animations CSS, et des outils de versionnement comme Git et GitHub. J’ai intégré une maquette en mobile-first en utilisant les maquettes pour mobile et desktop fournies, ainsi que le prototype sur Figma, les images et les textes nécessaires. Cette approche m’a permis de créer un site web réactif et adaptatif. J’ai ajouté des animations CSS pour améliorer l’expérience utilisateur et utilisé Sass pour organiser et maintenir les styles de manière plus efficace. Git et GitHub ont été utilisés pour la gestion de version et la collaboration sur le projet.
